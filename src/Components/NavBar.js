@@ -15,6 +15,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -28,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
 function NavBar(){
     const classes = useStyles();
     return(
+      
         <div>
           <div className="div1">           
               <img src={Banner} height="100%" width="100%" />
@@ -36,15 +38,15 @@ function NavBar(){
             <div className={classes.root}>
               <AppBar position="static" style={{background:'black'}}>
                   <Toolbar style={{flexGrow: 1}}>  
+
                     <List style={{display: "flex"}}>
                       <ListItem >About</ListItem>
                       <ListItem>Player Profile</ListItem>
                       <ListItem>Events</ListItem>
                       <ListItem>Sponsors</ListItem>
-                      <ListItem>Stores</ListItem>
-                      
-                      
+                      <ListItem>Stores</ListItem>                    
                     </List>   
+
                     <Button className={classes.rightToolbar} color="inherit">Player Login</Button>             
                      
                       
@@ -53,6 +55,7 @@ function NavBar(){
               </AppBar>
             </div>
         </div>
+       
     );
 
 }
