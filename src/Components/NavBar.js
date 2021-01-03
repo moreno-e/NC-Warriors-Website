@@ -19,12 +19,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    flexGrow: 1,
-  },
+  rightToolbar: {
+    marginLeft: "auto",
+    marginRight: -12,
+  }
 }));
 
 function NavBar(){
@@ -37,7 +35,7 @@ function NavBar(){
           
             <div className={classes.root}>
               <AppBar position="static" style={{background:'black'}}>
-                  <Toolbar>  
+                  <Toolbar style={{flexGrow: 1}}>  
                     <List style={{display: "flex"}}>
                       <ListItem >About</ListItem>
                       <ListItem>Player Profile</ListItem>
@@ -45,7 +43,9 @@ function NavBar(){
                       <ListItem>Sponsors</ListItem>
                       <ListItem>Stores</ListItem>
                       
-                    </List>                  
+                      
+                    </List>   
+                    <Button className={classes.rightToolbar} color="inherit">Player Login</Button>             
                      
                       
                     

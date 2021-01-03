@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 //import PrivateRoute from "./Components/PrivateRoute";
 import { AuthProvider } from "./Components/Auth";
 import Home from "./Components/Home";
+import Login from "./Components/Login"
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
         <Router>
           <div className="App">         
             <Switch>
-              <Route path="/" exact component={Home} />       
+              <Route path="/" exact component={Home} /> 
+              <Route path="/Login" exact component={Login} />       
             </Switch>
           </div>
         </Router>
