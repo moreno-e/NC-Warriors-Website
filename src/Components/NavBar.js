@@ -8,7 +8,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import AboutMenu from "./AboutMenu";
-import Banner from "../Images/Banner.jpg";
+
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -31,12 +31,11 @@ function NavBar(){
     return(
       
         <div>
-          <div className="div1">           
-              <img src={Banner} height="100%" width="100%" />
-          </div>
+          
           
             <div className={classes.root}>
-              <AppBar position="static" style={{background:'black'}}>
+              <AppBar position="static"  style={{background:'black'}}
+              >
                   <Toolbar style={{flexGrow: 1}}>  
 
                     <List style={{display: "flex"}}>
