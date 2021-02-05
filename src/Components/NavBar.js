@@ -1,62 +1,71 @@
-import React from 'react';
-import { Container } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import AboutMenu from "./AboutMenu";
-
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-
-
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Button from "@material-ui/core/Button";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import { useHistory } from "react-router-dom";
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    marginTop: 0,
+    marginBottom: -20,
   },
   rightToolbar: {
     marginLeft: "auto",
-    marginRight: -12,
-  }
+  },
+  button: {
+    flexGrow: 1,
+  },
 }));
 
-function NavBar(){
-    const classes = useStyles();
-    return(
-      
-        <div>
-          
-          
-            <div className={classes.root}>
-              <AppBar position="static"  style={{background:'black'}}
-              >
-                  <Toolbar style={{flexGrow: 1}}>  
+function NavBar() {
+  const classes = useStyles();
+  let history = useHistory();
 
-                    <List style={{display: "flex"}}>
-                      <ListItem >About</ListItem>
-                      <ListItem>Player Profile</ListItem>
-                      <ListItem>Events</ListItem>
-                      <ListItem>Sponsors</ListItem>
-                      <ListItem>Stores</ListItem>                    
-                    </List>   
+  function handleButtonClick(pageURL) {
+    history.push(pageURL);
+  }
 
-                    <Button className={classes.rightToolbar} color="inherit">Player Login</Button>             
-                     
-                      
-                    
-                  </Toolbar>
-              </AppBar>
-            </div>
-        </div>
-       
-    );
+  return (
+    <div>
+      <div className={classes.root}>
+        <AppBar position="relative" style={{ backgroundColor: "black" }}>
+          <Toolbar>
+            <Button
+              color="secondary"
+              onClick={() => handleButtonClick("/")}
+              style={{ color: "white" }}
+            >
+              Home
+            </Button>
 
+            <Button
+              c
+              color="secondary"
+              onClick={() => handleButtonClick("/PlayerProfiles")}
+              style={{ color: "white" }}
+            >
+              Player Profiles
+            </Button>
+
+            <Typography className={classes.button}></Typography>
+
+            <Button
+              variant="outlined"
+              color="secondary"
+              onClick={() => handleButtonClick("/Login")}
+              style={{ color: "white" }}
+            >
+              Player Login
+            </Button>
+          </Toolbar>
+        </AppBar>
+      </div>
+    </div>
+  );
 }
 
-export default  NavBar
+export default NavBar;
