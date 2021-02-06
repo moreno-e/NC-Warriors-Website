@@ -5,7 +5,7 @@ import Images from "./ImageSlider";
 import { SliderData } from "./SliderData";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
+
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
@@ -14,6 +14,8 @@ import Benner from "../Images/Benner.jpg";
 import "fontsource-roboto";
 import Footer from "../Footer";
 import Box from "@material-ui/core/Box";
+import Paper from "@material-ui/core/Paper";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,35 +42,47 @@ const useStyles = makeStyles((theme) => ({
     fontStyle: "italic",
     fontWeight: "lite",
     fontSize: 75,
-    marginTop: 20,
+    paddingTop: "20px",
+    marginTop: 0,
     textAlign: "center",
+    backgroundColor: "rgb(242, 242, 242)",
+    marginBottom: 0,
   },
   footer: {
     padding: "3px",
     backgroundColor: "black",
   },
-  image: {},
+  paper: {
+    display: "flex",
+    flexWrap: "wrap",
+    "& > *": {
+      margin: theme.spacing(1),
+      width: theme.spacing(16),
+      height: theme.spacing(16),
+    },
+  },
 }));
 
 function Home() {
   const classes = useStyles();
 
   return (
-    <Box style={{ backgroundColor: "rgb(204, 204, 204)" }}>
-      <Container>
-        <div className={classes.root}>
-          <div>
-            <Typography className={classes.title} variant="h1">
-              Welcome to the N.C. Warriors Hockey Program
-            </Typography>
-          </div>
+    <Container maxWidth="xl">
+      <Typography className={classes.title} variant="h1">
+        Welcome to the N.C. Warriors Hockey Program
+      </Typography>
 
-          <br />
-
-          <hr style={{ width: 1100 }}></hr>
-
-          <Grid container spacing={10} style={{ height: "100vh" }}>
-            <Grid item xs={6} style={{ marginTop: 50 }}>
+      <>
+        <Grid
+          container
+          display="flex"
+          direction="row"
+          justify="space-around"
+          alignItems="flex-start"
+          style={{ backgroundColor: "rgb(242, 242, 242)", height: "100vh" }}
+        >
+          <Grid item xs={5} style={{ width: "50%", marginTop: "50px" }}>
+            <Paper elevation={3}>
               <Typography className={classes.heading1} variant="h2">
                 An All Disabled Veteran Hockey Team
               </Typography>
@@ -111,33 +125,30 @@ function Home() {
                 intimate and fraternal.”
               </p>
               <p>#20 John Rodgers - Lower Team Captain</p>
-            </Grid>
-
-            <Grid
-              item
-              xs={6}
-              style={{
-                marginTop: 50,
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <Typography variant="h2" style={{ fontSize: 30 }}>
-                This Weeks Player Spot Light!
-              </Typography>
-
-              <Card style={{ width: "50%", marginLeft: "25%" }}>
-                <CardMedia
-                  component="img"
-                  image={Benner}
-                  style={{ height: "50%" }}
-                />
-                <CardContent>This is wayne!</CardContent>
-              </Card>
-            </Grid>
+            </Paper>
           </Grid>
-        </div>
-      </Container>
+
+          <Grid
+            item
+            xs={4}
+            style={{
+              marginTop: 50,
+
+              overflow: "hidden",
+            }}
+          >
+            <Typography variant="h2" style={{ fontSize: 30 }}>
+              This Weeks Player Spot Light!
+            </Typography>
+
+            {/* <Card style={{ width: "50%", marginLeft: "25%" }}>*/}
+            <Card style={{}}>
+              <CardMedia component="img" image={Benner} />
+              <CardContent>This is wayne!</CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+      </>
 
       {/* 
 
@@ -151,7 +162,7 @@ function Home() {
                 </blockquote>
             </div>  
             */}
-    </Box>
+    </Container>
   ); //EOR
 }
 

@@ -11,7 +11,7 @@ import { Typography } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: 0,
-    marginBottom: -20,
+    marginBottom: 0,
   },
   rightToolbar: {
     marginLeft: "auto",
@@ -49,6 +49,38 @@ function NavBar() {
               style={{ color: "white" }}
             >
               Player Profiles
+            </Button>
+            <Button
+              c
+              color="secondary"
+              onClick={() => handleButtonClick("/Events")}
+              style={{ color: "white" }}
+            >
+              Events
+            </Button>
+            <Button
+              c
+              color="secondary"
+              onClick={() => handleButtonClick("/FundraisingSponsors")}
+              style={{ color: "white" }}
+            >
+              Fundraising & Sponsors
+            </Button>
+            <Button
+              c
+              color="secondary"
+              onClick={() => handleButtonClick("/Store")}
+              style={{ color: "white" }}
+            >
+              Store
+            </Button>
+            <Button
+              c
+              color="secondary"
+              onClick={() => handleButtonClick("/NewPlayerForm")}
+              style={{ color: "white" }}
+            >
+              New Player Form
             </Button>
 
             <Typography className={classes.button}></Typography>

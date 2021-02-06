@@ -6,3 +6,19 @@
 .Footer {
   flex-shrink: 0;
 }
+
+.Home-Img{
+  max-height: 50%;
+  max-width: 50%;
+}
+
+.Sidebar{
+  height: 100%;
+  width: 50px;
+  background-color: black;
+  position: absolute;
+}
+
+.Right-Sidebar{
+  
+}
