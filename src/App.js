@@ -17,10 +17,10 @@ function App() {
   return (
     <>
       <img src={Banner} />
-      <div className="App-Content">
+     
         <Router>
           <NavBar />
-          <div style={{backgroundColor: "black", height: "100%"}}>
+        
             <Switch>
               <Route path="/" exact component={Home} />
               <Route path="/Login" exact component={Login} />
@@ -30,10 +30,12 @@ function App() {
               <Route path="/NewPlayerForm" exact component={NewPlayerForm} />
               <Route path="/Store" exact component={Store} />
             </Switch>
-          </div>
+          
         </Router>
-      </div>
-      <Footer className="Footer"></Footer>
+      
+      <Footer></Footer>
+     
+      
     </>
   );
 }

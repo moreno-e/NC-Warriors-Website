@@ -42,42 +42,37 @@ function NavBar() {
               Home
             </Button>
 
-            <Button
-              c
+            <Button             
               color="secondary"
               onClick={() => handleButtonClick("/PlayerProfiles")}
               style={{ color: "white" }}
             >
               Player Profiles
             </Button>
-            <Button
-              c
+            <Button              
               color="secondary"
               onClick={() => handleButtonClick("/Events")}
               style={{ color: "white" }}
             >
               Events
             </Button>
-            <Button
-              c
+            <Button             
               color="secondary"
               onClick={() => handleButtonClick("/FundraisingSponsors")}
               style={{ color: "white" }}
             >
               Fundraising & Sponsors
             </Button>
-            <Button
-              c
+            <Button             
               color="secondary"
-              onClick={() => handleButtonClick("/Store")}
+              href="https://stores.inksoft.com/ncwarriorshockey/shop/home"
               style={{ color: "white" }}
             >
               Store
             </Button>
-            <Button
-              c
+            <Button              
               color="secondary"
-              onClick={() => handleButtonClick("/NewPlayerForm")}
+              href="https://docs.google.com/forms/d/e/1FAIpQLScg7QnXVUhoXJFNv27DcjpOlDAPkhny3q7JnGS2pIdJNoTvKQ/viewform"
               style={{ color: "white" }}
             >
               New Player Form

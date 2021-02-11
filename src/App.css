@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Quattrocento&display=swap');
 .App-Content {
-  text-align: center;
-  flex: 1 0 auto
+  
+  flex: 1 0 auto,
+
 }
 
 .Footer {
@@ -19,6 +22,10 @@
   position: absolute;
 }
 
-.Right-Sidebar{
-  
+
+
+p{
+  font-family: 'Nunito Sans', sans-ser;
+  font-size: 20px;
 }
+
