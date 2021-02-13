@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Quattrocento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .App-Content {
   
   flex: 1 0 auto,
@@ -24,8 +26,5 @@
 
 
 
-p{
-  font-family: 'Nunito Sans', sans-ser;
-  font-size: 20px;
-}
+
 

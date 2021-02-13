@@ -5,8 +5,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import UpperPlayerInfo from "../UpperPlayerInfo.js";
-import LowerPlayerInfo from "../LowerPlayerInfo.js";
+import UpperPlayerInfo from "../DataFiles/UpperPlayerInfo.js";
+import LowerPlayerInfo from "../DataFiles/LowerPlayerInfo.js";
+import CoachesInfo from "../DataFiles/CoachesInfo.js";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,90 +18,170 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     color: theme.palette.text.secondary,
   },
-  upper: {
-    color: "Black",
+  titles: {
     backgroundColor: "white",
     textAlign: "left",
     paddingLeft: "20px",
-    paddingTop: "40px",
-    paddingBottom: "30px",
-    fontFamily: "'Nunito Sans', sans-serif",
+    paddingTop: "20px",
+    paddingBottom: "40px",
+    fontFamily: "'Oswald', sans-serif",
+    backgroundColor: "rgb(27, 27, 27)",
+    color: "rgb(214,214,214)",
   },
   card: {
     marginLeft: "30px",
     maxWidth: 400,
     justify: "center",
     marginBottom: "50px",
+    backgroundColor: "rgb(27, 27, 27)",
+    height: "77vh",
+    color: "rgb(214,214,214)",
+    border: "1px solid",
+  },
+  overridePlayerHeading: {
+    ...theme.typography.fontFamily,
+    fontFamily: "'Oswald', sans-serif",
+    fontWeight: "bold",
+    paddingBottom: "10px",
+  },
+  overridePlayerBody: {
+    ...theme.typography.fontFamily,
+    fontFamily: "'Open Sans', sans-serif",
+    textIndent: "50px",
+  },
+  grid: {
+    backgroundColor: "rgb(27, 27, 27)",
+  },
+  h2: {
+    color: "rgb(214,214,214)",
+    paddingLeft: "20px",
+    marginTop: "50px",
+    textAlign: "center",
+    fontFamily: "'Open Sans', sans-serif",
   },
 }));
-//xs ={6} sm={3}
+
 function PlayerProfiles() {
   const classes = useStyles();
+
   return (
     <Container maxWidth="xl" className={classes.root}>
-
-      <Typography className={classes.upper} variant="h3">
+      <h2 className={classes.h2}>
+        We currently have 74 members! We will continue adding members each week
+        as we release our player spotlight feature on our social media pages!
+      </h2>
+      <Typography className={classes.titles} variant="h3">
         The Warriors Upper Team
       </Typography>
 
       <Grid
+        className={classes.grid}
         container
         display="flex"
         direction="row"
         justify="space-evenly"
         alignItems="flex-start"
         spacing={0}
-        style={{ backgroundColor: "white" }}
       >
         {UpperPlayerInfo.map((data) => (
           <Grid item sm={3} style={{ justify: "center" }}>
             <Card className={classes.card}>
               <CardMedia component="img" image={data.image} />
               <CardContent>
-                <Typography variant="h5" align="center">
+                <Typography
+                  className={classes.overridePlayerHeading}
+                  align="center"
+                  variant="h5"
+                >
                   {data.name}
                 </Typography>
-
-                <p>{data.bio}</p>
+                <Typography
+                  className={classes.overridePlayerBody}
+                  variant="body1"
+                >
+                  {data.bio}
+                </Typography>
               </CardContent>
             </Card>
           </Grid>
         ))}
       </Grid>
 
-      <Typography className={classes.upper} variant="h3">
-          The Warriors Lower Team
+      <Typography className={classes.titles} variant="h3">
+        The Warriors Lower Team
       </Typography>
 
-        <Grid
+      <Grid
+        className={classes.grid}
         container
         display="flex"
         direction="row"
         justify="space-evenly"
         alignItems="flex-start"
         spacing={0}
-        style={{ backgroundColor: "white" }}
       >
         {LowerPlayerInfo.map((data) => (
           <Grid item sm={3} style={{ justify: "center" }}>
             <Card className={classes.card}>
               <CardMedia component="img" image={data.image} />
               <CardContent>
-                <Typography variant="h5" align="center">
+                <Typography
+                  className={classes.overridePlayerHeading}
+                  align="center"
+                  variant="h5"
+                >
                   {data.name}
                 </Typography>
 
-                <p>{data.bio}</p>
+                <Typography
+                  className={classes.overridePlayerBody}
+                  variant="body1"
+                >
+                  {data.bio}
+                </Typography>
               </CardContent>
             </Card>
           </Grid>
         ))}
       </Grid>
 
-      <Typography className={classes.upper} variant="h3">
-          The Warriors Coaching Staff
+      <Typography className={classes.titles} variant="h3">
+        The Warriors Coaching Staff
       </Typography>
 
+      <Grid
+        className={classes.grid}
+        container
+        display="flex"
+        direction="row"
+        justify="space-evenly"
+        alignItems="flex-start"
+        spacing={0}
+      >
+        {CoachesInfo.map((data) => (
+          <Grid item sm={3} style={{ justify: "center" }}>
+            <Card className={classes.card}>
+              <CardMedia component="img" image={data.image} />
+              <CardContent>
+                <Typography
+                  className={classes.overridePlayerHeading}
+                  align="center"
+                  variant="h5"
+                >
+                  {data.name}
+                </Typography>
+
+                <Typography
+                  className={classes.overridePlayerBody}
+                  variant="body1"
+                >
+                  {data.bio}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
     </Container>
   );
 }

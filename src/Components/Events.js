@@ -1,21 +1,16 @@
 import React from "react";
-import { Typography, Container, requirePropFactory } from "@material-ui/core";
+import { Typography, Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import SimpleImageSlider from "react-simple-image-slider";
-import images from "../sasquatch.js";
+import images from "../DataFiles/2020Images.js";
 import Grid from "@material-ui/core/Grid";
-import gameStats from "../2020GameStats.js";
-import gameStats2019 from "../2019GameStats";
-import { FaDraft2Digital } from "react-icons/fa";
-import Paper from "@material-ui/core/Paper";
-import images2019 from "../2019Images.js";
-import imagesPNC from "../HeaderImages.js";
-import Box from "@material-ui/core/Box";
+import gameStats from "../DataFiles/2020GameStats.js";
+import gameStats2019 from "../DataFiles/2019GameStats";
+import images2019 from "../DataFiles/2019Images.js";
+import imagesPNC from "../DataFiles/HeaderImages.js";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,12 +18,11 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
   },
   grid: {
-    backgroundColor: "rgb(240, 240, 240)",
+    backgroundColor: "rgb(27, 27, 27)",
     paddingBottom: "50px",
   },
   gridItem: {
-    marginBottom: "40px",
-
+    marginBottom: "50px",
     display: "grid",
     justifyItems: "center",
     alignItems: "center",
@@ -37,17 +31,19 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     paddingTop: "30px",
     paddingBottom: "40px",
-    backgroundColor: "rgb(240, 240, 240)",
+    backgroundColor: "rgb(27, 27, 27)",
+    color: "rgb(214,214,214)",
   },
   paragraph: {
     fontSize: "30px",
   },
   yearDescription: {
     paddingLeft: "40px",
-    paddingBottom: "50px",
-    backgroundColor: "rgb(240, 240, 240)",
+    marginBottom: "60px",
+    backgroundColor: "rgb(27, 27, 27)",
+    color: "rgb(214,214,214)",
     textDecoration: "underline",
-    fontFamily: "'Nunito Sans', sans-serif",
+    fontFamily: "'Oswald', sans-serif",
     fontSize: "50px",
   },
   listItem: {
@@ -62,12 +58,26 @@ const useStyles = makeStyles((theme) => ({
   slider: {
     justifyContent: "center",
     display: "flex",
-    backgroundColor: "rgb(240, 240, 240)",
+    backgroundColor: "rgb(27, 27, 27)",
     paddingTop: "20px",
-    paddingBottom: "100px",
+    paddingBottom: "50px",
   },
   card: {
     maxWidth: "22%",
+    backgroundColor: "rgb(27, 27, 27)",
+    color: "rgb(214,214,214)",
+    border: "1px solid",
+  },
+  overrideCardHeading: {
+    ...theme.typography.fontFamily,
+    fontFamily: "'Oswald', sans-serif",
+    fontWeight: "bold",
+    paddingBottom: "10px",
+  },
+  overrideCardBody: {
+    ...theme.typography.fontFamily,
+    fontFamily: "'Open Sans', sans-serif",
+   
   },
 }));
 
@@ -117,16 +127,18 @@ function Events() {
                   showNavs={true}
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
+                  <Typography
+                    gutterBottom
+                    className={classes.overrideCardHeading}
+                    variant="h5"
+                    component="h2"
+                   
+                  >
                     {data.match}
                   </Typography>
-                  <Typography variant="body2" color="textSecondary">
-                    {data.date}
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary">
-                    {data.location}
-                  </Typography>
-                  <Typography variant="subtitle2" align="center">
+                  <Typography className={classes.overrideCardBody} variant="body2">{data.date}</Typography>
+                  <Typography className={classes.overrideCardBody} variant="body2">{data.location}</Typography>
+                  <Typography className={classes.overrideCardBody} variant="subtitle2" align="center">
                     <br></br>
                     {data.warriors} - {data.opponent}
                   </Typography>
@@ -139,7 +151,7 @@ function Events() {
         <Typography
           className={classes.yearDescription}
           variant="h4"
-            align="center"
+          align="center"
         >
           NC Warriors 2019 Games and Tournaments
         </Typography>
@@ -168,23 +180,21 @@ function Events() {
                 <CardContent>
                   {Object.keys(data.match).map((index) => (
                     <>
-                      <Typography gutterBottom variant="h5" component="h2">
+                      <Typography className={classes.overrideCardHeading} gutterBottom variant="h5" component="h2">
                         {data.match[index].game}
                       </Typography>
 
-                      <Typography variant="subtitle1">
+                      <Typography className={classes.overrideCardBody} variant="subtitle1">
                         {data.location}
                       </Typography>
 
-                      <Typography variant="body2" color="textSecondary">
+                      <Typography className={classes.overrideCardBody} variant="body2">
                         {data.match[index].description}
                       </Typography>
 
-                      <Typography variant="body2" color="textSecondary">
-                        {data.date}
-                      </Typography>
+                      <Typography className={classes.overrideCardBody} variant="body2">{data.date}</Typography>
                       <br></br>
-                      <Typography align="center" variant="subtitle2">
+                      <Typography className={classes.overrideCardBody} style={{alignItems: "flex-end"}} variant="subtitle2">
                         {data.match[index].warriors} -{" "}
                         {data.match[index].opponent}
                       </Typography>

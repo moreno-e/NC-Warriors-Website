@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: 0,
     marginBottom: 0,
+    
   },
   rightToolbar: {
     marginLeft: "auto",
@@ -19,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
   button: {
     flexGrow: 1,
   },
+  fontStyling:{
+    fontStyle: "'Open Sans', sans-serif",
+  }
 }));
 
 function NavBar() {
@@ -32,50 +36,64 @@ function NavBar() {
   return (
     <div>
       <div className={classes.root}>
-        <AppBar position="relative" style={{ backgroundColor: "black" }}>
+        <AppBar position="relative" style={{ backgroundColor: "black", }}>
           <Toolbar>
             <Button
               color="secondary"
               onClick={() => handleButtonClick("/")}
-              style={{ color: "white" }}
+              style={{ color: "white",fontStyle: "'Open Sans', sans-serif" }}
             >
+              <Typography className={classes.fontStyling}>
               Home
+              </Typography>
             </Button>
 
-            <Button             
+            <Button 
+              className={classes.fontStyling}        
               color="secondary"
               onClick={() => handleButtonClick("/PlayerProfiles")}
-              style={{ color: "white" }}
+              style={{ color: "white",fontStyle: "'Open Sans', sans-serif" }}
+
             >
+              <Typography className={classes.fontStyling}>
               Player Profiles
+              </Typography>
             </Button>
             <Button              
               color="secondary"
               onClick={() => handleButtonClick("/Events")}
               style={{ color: "white" }}
             >
+              <Typography className={classes.fontStyling}>
               Events
+              </Typography>
             </Button>
             <Button             
               color="secondary"
               onClick={() => handleButtonClick("/FundraisingSponsors")}
               style={{ color: "white" }}
             >
+              <Typography className={classes.fontStyling}>
               Fundraising & Sponsors
+              </Typography>
             </Button>
             <Button             
               color="secondary"
               href="https://stores.inksoft.com/ncwarriorshockey/shop/home"
               style={{ color: "white" }}
             >
+              <Typography className={classes.fontStyling}>
               Store
+              </Typography>
             </Button>
             <Button              
               color="secondary"
               href="https://docs.google.com/forms/d/e/1FAIpQLScg7QnXVUhoXJFNv27DcjpOlDAPkhny3q7JnGS2pIdJNoTvKQ/viewform"
               style={{ color: "white" }}
             >
+              <Typography className={classes.fontStyling}>
               New Player Form
+              </Typography>
             </Button>
 
             <Typography className={classes.button}></Typography>
@@ -86,7 +104,9 @@ function NavBar() {
               onClick={() => handleButtonClick("/Login")}
               style={{ color: "white" }}
             >
+              <Typography className={classes.fontStyling}>
               Player Login
+              </Typography>
             </Button>
           </Toolbar>
         </AppBar>
