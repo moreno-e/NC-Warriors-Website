@@ -106,12 +106,12 @@ function Home() {
         <Grid
           className={classes.grid}
           container
-          display="flex"
+        
           direction="row"
           justify="space-around"
           alignItems="flex-start"
         >
-          <Grid item xs={5} style={{ width: "50%", marginTop: "50px" }}>
+          <Grid item sm={5} style={{marginTop: "50px"}}>
             <Typography className={classes.heading1} variant="h3">
               AN ALL DISABLED VETERAN HOCKEY TEAM
             </Typography>
@@ -174,7 +174,7 @@ function Home() {
 
           <Grid
             item
-            xs={4}
+            sm={4}
             style={{
               marginTop: 50,
               overflow: "hidden",

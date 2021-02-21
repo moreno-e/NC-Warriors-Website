@@ -11,6 +11,7 @@ import imagesPNC from "../DataFiles/HeaderImages.js";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -61,12 +62,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgb(27, 27, 27)",
     paddingTop: "20px",
     paddingBottom: "50px",
+    width: "90wh",
+    [theme.breakpoints.down('sm')]: {
+      display: "none",
+    },
   },
   card: {
-    maxWidth: "22%",
+    width: "425px",
     backgroundColor: "rgb(27, 27, 27)",
     color: "rgb(214,214,214)",
     border: "1px solid",
+    display: "block"
   },
   overrideCardHeading: {
     ...theme.typography.fontFamily,
@@ -77,18 +83,32 @@ const useStyles = makeStyles((theme) => ({
   overrideCardBody: {
     ...theme.typography.fontFamily,
     fontFamily: "'Open Sans', sans-serif",
-   
   },
+  
 }));
 
 function Events() {
   const classes = useStyles();
 
+
   return (
     <div>
       <Container maxWidth="xl" className={classes.root}>
-        <div className={classes.slider}>
+        
+
+        <Grid
+          className={classes.grid}
+          container            
+          justifyContent= "space-evenly"
+          alignItems="flex-start"
+          spacing={0}
+        >
+        
+      
+        <Grid item xs={12} className={classes.slider}>
+        
           <SimpleImageSlider
+            className="slider1"
             navStyle={2}
             width={900}
             height={600}
@@ -97,8 +117,11 @@ function Events() {
             showBullets={true}
             slideDuration={0.7}
           />
-        </div>
+     
+        </Grid>
+        
 
+        <Grid item xs={12}>
         <Typography
           className={classes.yearDescription}
           variant="h4"
@@ -106,45 +129,54 @@ function Events() {
         >
           NC Warriors 2020 Games and Tournaments
         </Typography>
+        
+        </Grid>
 
-        <Grid
-          className={classes.grid}
-          container
-          direction="row"
-          justify="space-around"
-          alignItems="flex-start"
-          spacing={0}
-        >
           {gameStats.map((data, index) => (
-            <Card className={classes.card} style={{ height: "50vh" }}>
-              <CardActionArea>
-                <SimpleImageSlider
-                  style={{ justifyContent: "center" }}
-                  navStyle={2}
-                  width={425}
-                  height={250}
-                  images={images[index]}
-                  showNavs={true}
-                />
-                <CardContent>
-                  <Typography
-                    gutterBottom
-                    className={classes.overrideCardHeading}
-                    variant="h5"
-                    component="h2"
-                   
-                  >
-                    {data.match}
-                  </Typography>
-                  <Typography className={classes.overrideCardBody} variant="body2">{data.date}</Typography>
-                  <Typography className={classes.overrideCardBody} variant="body2">{data.location}</Typography>
-                  <Typography className={classes.overrideCardBody} variant="subtitle2" align="center">
-                    <br></br>
-                    {data.warriors} - {data.opponent}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
+            <Grid item xs>
+              <Card className={classes.card} style={{ height: "50vh" }}>
+                <CardActionArea>
+                  <SimpleImageSlider
+                    style={{ justifyContent: "center" }}
+                    navStyle={2}
+                    width={425}
+                    height={250}
+                    images={images[index]}
+                    showNavs={true}
+                  />
+                  <CardContent>
+                    <Typography
+                      gutterBottom
+                      className={classes.overrideCardHeading}
+                      variant="h5"
+                      component="h2"
+                    >
+                      {data.match}
+                    </Typography>
+                    <Typography
+                      className={classes.overrideCardBody}
+                      variant="body2"
+                    >
+                      {data.date}
+                    </Typography>
+                    <Typography
+                      className={classes.overrideCardBody}
+                      variant="body2"
+                    >
+                      {data.location}
+                    </Typography>
+                    <Typography
+                      className={classes.overrideCardBody}
+                      variant="subtitle2"
+                      align="center"
+                    >
+                      <br></br>
+                      {data.warriors} - {data.opponent}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>
           ))}
         </Grid>
 
@@ -180,21 +212,41 @@ function Events() {
                 <CardContent>
                   {Object.keys(data.match).map((index) => (
                     <>
-                      <Typography className={classes.overrideCardHeading} gutterBottom variant="h5" component="h2">
+                      <Typography
+                        className={classes.overrideCardHeading}
+                        gutterBottom
+                        variant="h5"
+                        component="h2"
+                      >
                         {data.match[index].game}
                       </Typography>
 
-                      <Typography className={classes.overrideCardBody} variant="subtitle1">
+                      <Typography
+                        className={classes.overrideCardBody}
+                        variant="subtitle1"
+                      >
                         {data.location}
                       </Typography>
 
-                      <Typography className={classes.overrideCardBody} variant="body2">
+                      <Typography
+                        className={classes.overrideCardBody}
+                        variant="body2"
+                      >
                         {data.match[index].description}
                       </Typography>
 
-                      <Typography className={classes.overrideCardBody} variant="body2">{data.date}</Typography>
+                      <Typography
+                        className={classes.overrideCardBody}
+                        variant="body2"
+                      >
+                        {data.date}
+                      </Typography>
                       <br></br>
-                      <Typography className={classes.overrideCardBody} style={{alignItems: "flex-end"}} variant="subtitle2">
+                      <Typography
+                        className={classes.overrideCardBody}
+                        style={{ alignItems: "flex-end" }}
+                        variant="subtitle2"
+                      >
                         {data.match[index].warriors} -{" "}
                         {data.match[index].opponent}
                       </Typography>

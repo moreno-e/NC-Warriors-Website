@@ -29,14 +29,13 @@ const useStyles = makeStyles((theme) => ({
     color: "rgb(214,214,214)",
   },
   card: {
-    marginLeft: "30px",
-    maxWidth: 400,
-    justify: "center",
+    maxWidth: "auto",
     marginBottom: "50px",
     backgroundColor: "rgb(27, 27, 27)",
-    height: "77vh",
+    height: "43em",
     color: "rgb(214,214,214)",
     border: "1px solid",
+    paddingBottom: "10px",
   },
   overridePlayerHeading: {
     ...theme.typography.fontFamily,
@@ -79,12 +78,12 @@ function PlayerProfiles() {
         container
         display="flex"
         direction="row"
-        justify="space-evenly"
+        justify="space-around"
         alignItems="flex-start"
-        spacing={0}
+        spacing={6}
       >
         {UpperPlayerInfo.map((data) => (
-          <Grid item sm={3} style={{ justify: "center" }}>
+          <Grid item sm={3} >
             <Card className={classes.card}>
               <CardMedia component="img" image={data.image} />
               <CardContent>
@@ -116,9 +115,9 @@ function PlayerProfiles() {
         container
         display="flex"
         direction="row"
-        justify="space-evenly"
+        justify="space-around"
         alignItems="flex-start"
-        spacing={0}
+        spacing={7}
       >
         {LowerPlayerInfo.map((data) => (
           <Grid item sm={3} style={{ justify: "center" }}>
@@ -154,9 +153,9 @@ function PlayerProfiles() {
         container
         display="flex"
         direction="row"
-        justify="space-evenly"
+        justify="space-around"
         alignItems="flex-start"
-        spacing={0}
+        spacing={7}
       >
         {CoachesInfo.map((data) => (
           <Grid item sm={3} style={{ justify: "center" }}>

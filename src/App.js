@@ -11,31 +11,32 @@ import FundraisingSponsors from "./Components/FundraisingSponsors";
 import NewPlayerForm from "./Components/NewPlayerForm";
 import Store from "./Components/Store";
 import Footer from "./Footer";
-
-
+import DataFetching from "./Components/DataFetching";
 function App() {
   return (
     <>
       <img src={Banner} />
-     
-        <Router>
-          <NavBar />
-        
-            <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="/Login" exact component={Login} />
-              <Route path="/PlayerProfiles" exact component={PlayerProfiles} />
-              <Route path="/Events" exact component={Events} />
-              <Route path="/FundraisingSponsors" exact component={FundraisingSponsors} />
-              <Route path="/NewPlayerForm" exact component={NewPlayerForm} />
-              <Route path="/Store" exact component={Store} />
-            </Switch>
-          
-        </Router>
-      
+
+      <Router>
+        <NavBar />
+
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/Login" exact component={Login} />
+          <Route path="/PlayerProfiles" exact component={PlayerProfiles} />
+          <Route path="/Events" exact component={Events} />
+          <Route
+            path="/FundraisingSponsors"
+            exact
+            component={FundraisingSponsors}
+          />
+          <Route path="/NewPlayerForm" exact component={NewPlayerForm} />
+          <Route path="/Store" exact component={Store} />
+          <Route path="/DataFetching" exact component={DataFetching} />
+        </Switch>
+      </Router>
+
       <Footer></Footer>
-     
-      
     </>
   );
 }
