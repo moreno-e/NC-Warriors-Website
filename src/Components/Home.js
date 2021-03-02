@@ -9,7 +9,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardHeader from "@material-ui/core/CardHeader";
 import Image from "material-ui-image";
 import Schmidt from "../Images/Schmidt.jpg";
-import Benner from "../Images/Harris_Coach.jpg";
+import Benner from "../Images/Urbany.jpg";
 import "fontsource-roboto";
 import Team from "../Images/WarriorsTeamPhoto.jpg";
 import FacebookIcon from "@material-ui/icons/Facebook";
@@ -79,17 +79,15 @@ const useStyles = makeStyles((theme) => ({
   },
   overrideCardHeading: {
     ...theme.typography.fontFamily,
-    fontFamily: "'Oswald', sans-serif", 
+    fontFamily: "'Oswald', sans-serif",
     textAlign: "center",
-    fontSize:"30px"
-    
+    fontSize: "30px",
   },
 
   overrideSponsorBody: {
     ...theme.typography.fontFamily,
     fontFamily: "'Open Sans', sans-serif",
-    fontSize:"20px"
-   
+    fontSize: "20px",
   },
 }));
 
@@ -105,12 +103,12 @@ function Home() {
       <>
         <Grid
           className={classes.grid}
-          container        
+          container
           direction="row"
           justify="space-around"
           alignItems="flex-start"
         >
-          <Grid item sm={5} style={{marginTop: "50px"}}>
+          <Grid item sm={5} style={{ marginTop: "50px" }}>
             <Typography className={classes.heading1} variant="h3">
               AN ALL DISABLED VETERAN HOCKEY TEAM
             </Typography>
@@ -189,18 +187,16 @@ function Home() {
               <CardMedia component="img" image={Benner} />
               <CardContent>
                 <Typography className={classes.paragraph}>
-                  <b>Coach Dustin Harris</b> has been an important piece in our
-                  team since it’s inception. Being involved with hockey from a
-                  very early age as he started playing at 5 years old, he eats
-                  sleeps and breathes hockey.
-                </Typography>
-                <br></br>
-                <Typography className={classes.paragraph}>
-                  He has been coaching since 2008, and moved to Raleigh in July
-                  of 2019. Not only is he currently coaching the NC Warriors, he
-                  also coaches the Carolina Stars 14U and Travel A teams. His
-                  favorite teams are the Detroit Red Wings and Vegas Golden
-                  Knights. Thanks for everything you do to help the team, Coach!
+                  <b>Donald Urbany</b> from Detroit, Michigan has been playing
+                  hockey for the past 28 years. To include being with the N.C.
+                  Warriors since their inception. Having served in the US Army
+                  as a fire support specialist with 4/64th Armor, 4th Brigade,
+                  3d Infantry Division out of Fort Stewart, GA. Donald is a recipent
+                  of a Purple Heart, having been struck by an IED causing him to
+                  lose his right eye in 2005 during a delpoyment to Iraq.
+                  However, this has not let it hinder his ability to read plays
+                  and stop the puck with ease, making him the best one eyed
+                  goalie we’ve ever seen!
                 </Typography>
               </CardContent>
             </Card>
@@ -212,7 +208,7 @@ function Home() {
                 className={classes.paragraph}
                 align="center"
                 variant="h5"
-                style={{marginTop:"40px"}}
+                style={{ marginTop: "40px" }}
               >
                 Be sure to follow us on social media!
               </Typography>

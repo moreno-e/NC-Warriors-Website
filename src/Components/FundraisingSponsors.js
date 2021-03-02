@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
     color: "rgb(214,214,214)",
   },
   button: {
-    justifyContent: "center",
     "& > *": {
       margin: theme.spacing(1),
     },
@@ -24,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
     display: "block",
     marginLeft: "auto",
     marginRight: "auto",
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
   },
   leftHeading: {
     textAlign: "center",
@@ -44,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   pbutton: {
     display: "flex",
     justifyContent: "center",
-    alignContent: "center"
+    alignContent: "center",
   },
   root: {
     flexGrow: 1,
@@ -55,12 +57,19 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "'Open Sans', sans-serif",
     textAlign: "center",
     textDecoration: "underline",
+    padding: ".5em",
   },
 
   overrideSponsorBody: {
     ...theme.typography.fontFamily,
     fontFamily: "'Open Sans', sans-serif",
     fontSize: "20px",
+    paddingBottom: "30px",
+  },
+  imgHide: {
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    },
   },
 }));
 
@@ -83,88 +92,119 @@ function FundraisingSponsors() {
             Our Amazing Sponsors
           </Typography>
 
-          <p style={{ float: "left" }}>
-            <img src={OHT}></img>
-          </p>
-          <Typography className={classes.overrideSponsorHeading} variant="h5">
-            Operation Hat Trick
-          </Typography>
-          <p style={{ textAlign: "center" }}>
-            <Typography className={classes.overrideSponsorBody} variant="h6">
-              “Operation Hat Trick generates awareness and support for the
-              recovery of wounded service members and veterans through the sale
-              of OHT branded merchandise and products, proceeds of which are
-              donated to selected organizations that fulfill the OHT mission”
-            </Typography>
-          </p>
-          <p className={classes.pbutton}>
-            <Button
-              className={classes.button}
-              variant="outlined"
-              color="secondary"
-              href="https://operationhattrick.org/"
-            >
-              Support Operation Hat Trick
-            </Button>
-          </p>
-
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <hr></hr>
-
-          <p style={{ float: "left" }}>
-            <img src={Edge} style={{ height: "127px", width: "256px", paddingBottom: "30px"  }}></img>
-          </p>
-          <Typography className={classes.overrideSponsorHeading} variant="h5">
-            EDGE - PRINTED PRODUCTS
-          </Typography>
-          <p style={{ textAlign: "center" }}>
-            <Typography className={classes.overrideSponsorBody}>
-              Edge Printed Products is a full scale Screen Printing, Embroidery,
-              Signage and E-Commerce fulfillment shop dedicated to providing
-              high quality products with industry leading turnaround times."
-              <br></br>Custom apparel - Customer Service - Lower Costs - No
-              Minimums
-            </Typography>
-            <p className={classes.pbutton}>
-            <Button
-              className={classes.button}
-              variant="outlined"
-              color="secondary"
-              href="https://www.printedproducts.com/"
-            >
-              Support Edge - Printed Products
-            </Button>
-          </p>
-          </p>
-          
-
-          <hr></hr>
-
-          <div style={{ clear: "left", marginBottom: "20px" }}>
-            <p style={{ float: "left" }}>
-              <img src={CSAH} style={{ height: "250px", width: "250px", paddingBottom: "30px" }} ></img>
-            </p>
-            <Typography className={classes.overrideSponsorHeading} variant="h5">
-              COALITION TO SALUTE AMERICA'S HEROES
-            </Typography>
-            <p style={{ textAlign: "center" }}>
-              <Typography className={classes.overrideSponsorBody}>
-                "The mission of the Coalition to Salute America’s Heroes is to
-                help severely-wounded veterans and families of Operation
-                Enduring Freedom, Operation Iraqi Freedom, and Operation New
-                Dawn recover from their injuries and illnesses, and to inspire
-                other organizations and the general public to participate in
-                this effort." "Through our programs of aid and assistance, the
-                Coalition offers individual contributors, corporations and
-                volunteers many ways to give so these veterans and their
-                families receive what they need and deserve in return for the
-                sacrifices they made for us."
+          <div style={{ display: "flex" }}>
+            <div style={{ float: "left" }}>
+              <img src={OHT} className={classes.imgHide}></img>
+            </div>
+            <div>
+              <Typography
+                className={classes.overrideSponsorHeading}
+                variant="h5"
+              >
+                Operation Hat Trick
               </Typography>
-              <div className={classes.pbutton}>
+              <p style={{ textAlign: "center" }}>
+                <Typography
+                  className={classes.overrideSponsorBody}
+                  variant="h6"
+                >
+                  “Operation Hat Trick generates awareness and support for the
+                  recovery of wounded service members and veterans through the
+                  sale of OHT branded merchandise and products, proceeds of
+                  which are donated to selected organizations that fulfill the
+                  OHT mission”
+                </Typography>
+
+                <Button
+                  className={classes.button}
+                  variant="outlined"
+                  color="secondary"
+                  href="https://operationhattrick.org/"
+                >
+                  Support Operation Hat Trick
+                </Button>
+              </p>
+            </div>
+          </div>
+
+          <hr></hr>
+
+          <div style={{ display: "flex" }}>
+            <p style={{ float: "left" }}>
+              <img
+                className={classes.imgHide}
+                src={Edge}
+                style={{
+                  height: "127px",
+                  width: "256px",
+                  margin:"55px 0"
+                }}
+              ></img>
+            </p>
+
+            <div>
+              <Typography
+                className={classes.overrideSponsorHeading}
+                variant="h5"
+              >
+                EDGE - PRINTED PRODUCTS
+              </Typography>
+              <p style={{ textAlign: "center" }}>
+                <Typography className={classes.overrideSponsorBody}>
+                  Edge Printed Products is a full scale Screen Printing,
+                  Embroidery, Signage and E-Commerce fulfillment shop dedicated
+                  to providing high quality products with industry leading
+                  turnaround times."
+                  <br></br>Custom apparel - Customer Service - Lower Costs - No
+                  Minimums
+                </Typography>
+
+                <Button
+                  className={classes.button}
+                  variant="outlined"
+                  color="secondary"
+                  href="https://www.printedproducts.com/"
+                >
+                  Support Edge - Printed Products
+                </Button>
+              </p>
+            </div>
+          </div>
+          <hr></hr>
+
+          <div style={{ display: "flex" }}>
+            <p style={{ float: "left" }}>
+              <img
+                className={classes.imgHide}
+                src={CSAH}
+                style={{
+                  height: "250px",
+                  width: "250px",
+                  margin:"55px 0"
+                }}
+              ></img>
+            </p>
+            <div>
+              <Typography
+                className={classes.overrideSponsorHeading}
+                variant="h5"
+              >
+                COALITION TO SALUTE AMERICA'S HEROES
+              </Typography>
+              <p style={{ textAlign: "center" }}>
+                <Typography className={classes.overrideSponsorBody}>
+                  "The mission of the Coalition to Salute America’s Heroes is to
+                  help severely-wounded veterans and families of Operation
+                  Enduring Freedom, Operation Iraqi Freedom, and Operation New
+                  Dawn recover from their injuries and illnesses, and to inspire
+                  other organizations and the general public to participate in
+                  this effort." "Through our programs of aid and assistance, the
+                  Coalition offers individual contributors, corporations and
+                  volunteers many ways to give so these veterans and their
+                  families receive what they need and deserve in return for the
+                  sacrifices they made for us."
+                </Typography>
+
                 <Button
                   className={classes.button}
                   variant="outlined"
@@ -173,39 +213,40 @@ function FundraisingSponsors() {
                 >
                   Support Coalition to Salute America's Heroes
                 </Button>
-              </div>
-            </p>
+              </p>
+            </div>
           </div>
-          <div></div>
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid item sm={4}>
           <Typography className={classes.rightHeading} variant="h3">
             Looking to Donate?
           </Typography>
           <p style={{ textAlign: "center" }}>
-            <Typography className={classes.overrideSponsorBody}>
-              We are in the process of raising funds to help purchase more ice
-              time, equipment, travel and other essentials for the North
-              Carolina Warriors Hockey Program. We've been growing and working
-              with our players and need more ice time and more bonding time to
-              give these disabled veterans the relief they are needing. This
-              program has helped so many veterans thus far and receiving more
-              money to give the program more ice time is only going to further
-              improve their quality of life and help them cope with the stress
-              of daily living. We've currently obtained 2 sponsors, and numerous
-              donations, but when funding ice, equipment, and travel for 35
-              disabled veterans it doesn't take long to start using up all that
-              money. All the money we raise will go directly back into this
-              program and help us obtain more ice time, set up more charity
-              games, and start working on projects to help give back to the
-              community. If you know of anyone who would be interested in
-              becoming a sponsor or would like to be a part of the team please
-              reach out to us at
-              <b> travis.harris@northcarolinawarriors.com</b>
-            </Typography>
-          </p>
-          <div className={classes.pbutton}>
+            <div>
+              <Typography className={classes.overrideSponsorBody}>
+                We are in the process of raising funds to help purchase more ice
+                time, equipment, travel and other essentials for the North
+                Carolina Warriors Hockey Program. We've been growing and working
+                with our players and need more ice time and more bonding time to
+                give these disabled veterans the relief they are needing. This
+                program has helped so many veterans thus far and receiving more
+                money to give the program more ice time is only going to further
+                improve their quality of life and help them cope with the stress
+                of daily living. We've currently obtained 2 sponsors, and
+                numerous donations, but when funding ice, equipment, and travel
+                for 35 disabled veterans it doesn't take long to start using up
+                all that money. All the money we raise will go directly back
+                into this program and help us obtain more ice time, set up more
+                charity games, and start working on projects to help give back
+                to the community. If you know of anyone who would be interested
+                in becoming a sponsor or would like to be a part of the team
+                please reach out to us at
+                <b> travis.harris@northcarolinawarriors.com</b>
+              </Typography>
+            </div>
+         
+          <div>
             <Button
               className={classes.button}
               variant="outlined"
@@ -215,6 +256,7 @@ function FundraisingSponsors() {
               Click here to donate
             </Button>
           </div>
+          </p>
           <br></br>
           <img
             className={classes.center}

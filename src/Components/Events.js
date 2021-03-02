@@ -65,10 +65,7 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "underline",
     fontFamily: "'Oswald', sans-serif",
     fontSize: "50px",
-  },
-  listItem: {
-    fontSize: "20px",
-  },
+  }, 
   paper: {
     paddingTop: "10px",
     paddingLeft: "10px",
@@ -81,6 +78,8 @@ const useStyles = makeStyles((theme) => ({
     color: "rgb(214,214,214)",
     border: "1px solid",
     display: "block",
+    minHeight:"420px",
+    marginBottom: "15px" 
   },
   overrideCardHeading: {
     ...theme.typography.fontFamily,
@@ -103,7 +102,7 @@ function Events() {
         <Grid
           className={classes.grid}
           container
-          justify="space-evenly"
+          justify="space-around"
           alignItems="flex-start"
           spacing={0}
         >
@@ -163,8 +162,7 @@ function Events() {
           {gameStats.map((data, index) => (
             <Grid item>
               <Card
-                className={classes.card}
-                style={{ height: "50vh", marginBottom: "15px" }}
+                className={classes.card}                
               >
                 <CardActionArea>
                   <SimpleImageSlider
@@ -181,6 +179,7 @@ function Events() {
                       className={classes.overrideCardHeading}
                       variant="h5"
                       component="h2"
+                      align="center"
                     >
                       {data.match}
                     </Typography>
@@ -230,7 +229,7 @@ function Events() {
             <Grid item>
               <Card
                 className={classes.card}
-                style={{ height: "53vh", marginBottom: "15px" }}
+                style={{ }}
               >
                 <CardActionArea>
                   <SimpleImageSlider
@@ -249,6 +248,7 @@ function Events() {
                           gutterBottom
                           variant="h5"
                           component="h2"
+                          align="center"
                         >
                           {data.match[index].game}
                         </Typography>
@@ -278,6 +278,7 @@ function Events() {
                           className={classes.overrideCardBody}
                           align="center"
                           variant="subtitle2"
+                          
                         >
                           {data.match[index].warriors} -
                           {data.match[index].opponent}

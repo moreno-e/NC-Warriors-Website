@@ -13,10 +13,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  paper: {
-    padding: theme.spacing(2),
+  topNote: {
+    color: "rgb(214,214,214)",
+    paddingLeft: "20px",
+    marginTop: "50px",
     textAlign: "center",
-    color: theme.palette.text.secondary,
+    fontFamily: "'Open Sans', sans-serif",
   },
   titles: {
     backgroundColor: "white",
@@ -28,11 +30,16 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgb(27, 27, 27)",
     color: "rgb(214,214,214)",
   },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: "center",
+    color: theme.palette.text.secondary,
+  },  
   card: {
     maxWidth: "auto",
     marginBottom: "50px",
     backgroundColor: "rgb(27, 27, 27)",
-    height: "43em",
+    minHeight: "700px",
     color: "rgb(214,214,214)",
     border: "1px solid",
     paddingBottom: "10px",
@@ -48,16 +55,8 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "'Open Sans', sans-serif",
     textIndent: "50px",
   },
-  grid: {
-    backgroundColor: "rgb(27, 27, 27)",
-  },
-  h2: {
-    color: "rgb(214,214,214)",
-    paddingLeft: "20px",
-    marginTop: "50px",
-    textAlign: "center",
-    fontFamily: "'Open Sans', sans-serif",
-  },
+  
+  
 }));
 
 function PlayerProfiles() {
@@ -65,7 +64,7 @@ function PlayerProfiles() {
 
   return (
     <Container maxWidth="xl" className={classes.root}>
-      <h2 className={classes.h2}>
+      <h2 className={classes.topNote}>
         We currently have 74 members! We will continue adding members each week
         as we release our player spotlight feature on our social media pages!
       </h2>
@@ -83,7 +82,7 @@ function PlayerProfiles() {
         spacing={6}
       >
         {UpperPlayerInfo.map((data) => (
-          <Grid item md={3} >
+          <Grid item sm={3} >
             <Card className={classes.card}>
               <CardMedia component="img" image={data.image} />
               <CardContent>

@@ -15,11 +15,11 @@ const stats = [
   {
     date: "October 4, 2019",
     location:
-      " USA Hockey Warriors Classic Presented by Terry Fator - Las Vegas, NV",
+      "Game 1 - USA Hockey Warriors Classic ",
     match: [
       {
-        game: " Game 1: NC Warriors vs. Pittsburgh Warriors",
-        description: "Las Vegas Ice Center ",
+        game: "NC Warriors vs. Pittsburgh Warriors",
+        description: "Presented by Terry Fator - Las Vegas Ice Center ",
         warriors: "NC Warriors (7)",
         opponent: "Pittsburgh Warriors (2)",
       },
@@ -29,11 +29,11 @@ const stats = [
   {
     date: "October 4, 2019",
     location:
-      " USA Hockey Warriors Classic Presented by Terry Fator - Las Vegas, NV",
+      " Game 2 - USA Hockey Warriors Classic",
     match: [
       {
-        game: "Game 2: NC Warriors vs. Las Vegas Warriors",
-        description: "City National Arena",
+        game: "NC Warriors vs. Las Vegas Warriors",
+        description: "Presented by Terry Fator - City National Arena",
         warriors: "NC Warriors (8)",
         opponent: "Las Vegas Warriors (2)",
       },
@@ -43,11 +43,11 @@ const stats = [
   {
     date: "October 4, 2019",
     location:
-      " USA Hockey Warriors Classic Presented by Terry Fator - Las Vegas, NV",
+      "Game 3 - USA Hockey Warriors Classic",
     match: [
       {
-        game: "Game 3: NC Warriors vs. Avalanche Warriors",
-        description: "City National Arena",
+        game: "NC Warriors vs. Avalanche Warriors",
+        description: "Presented by Terry Fator - City National Arena",
         warriors: "NC Warriors (7)",
         opponent: "Avalance Warriors (6)",
       },
@@ -57,10 +57,10 @@ const stats = [
   {
     date: "October 5, 2019",
     location:
-      " USA Hockey Warriors Classic Presented by Terry Fator - Las Vegas, NV",
+      "Playoff Game - USA Hockey Warriors Classic",
     match: [
       {
-        game: "Playoff Game: NC Warriors vs. Nebraska Warriors",
+        game: "NC Warriors vs. Nebraska Warriors",
         description: "City National Arena",
         warriors: "NC Warriors (3)",
         opponent: "Nebraska Warriors (2)",
@@ -71,10 +71,10 @@ const stats = [
   {
     date: "October 6, 2019",
     location:
-      " USA Hockey Warriors Classic Presented by Terry Fator - Las Vegas, NV",
+      "Championship Game - USA Hockey Warriors Classic",
     match: [
       {
-        game: "Championship Gam: NC Warriors vs. Pilly Flyers Warriors",
+        game: "NC Warriors vs. Pilly Flyers Warriors",
         description: "City National Arena",
         warriors: "NC Warriors (3)",
         opponent: "Pilly Flyers Warriors (7)",
