@@ -43,7 +43,7 @@ Player Profiles
 ![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_PlayerProfilesPage.png)
 
 Events Page
-![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_EventsPage.png)
+![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_EventPage.png)
 
 Fundraising & Sponsors Page
 ![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_FundraisingSponsorsPage.png)
