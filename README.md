@@ -19,7 +19,8 @@ This website will replace the current ncwarriors.com website. The new applicaito
   - Redirects to the Warriors store and the new player form
   
 ## Future Features
-- Current API Spring back end is being worked on
+- Login Feature
+  - Current API Spring back end is being worked on
   - Will allow board members and coahces to view current players on the team from an API (Spring Security)
   - Allow request from SportsEngine API to display player stats who are currently on a league team
 
@@ -35,5 +36,15 @@ This website will replace the current ncwarriors.com website. The new applicaito
 - Material UI
 
 ## What app looks like as of 3.2.2021
+Home Page
+![alt text] (https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_HomePage.png)
 
+Player Profiles
+![alt text] (https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_PlayerProfilesPage.png)
+
+Events Page
+![alt text] (https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_EventsPage.png)
+
+Fundraising & Sponsors Page
+![alt text] (https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_FundraisingSponsorsPage.png)
 
