@@ -16,7 +16,7 @@ const images = [
     { url: "2019-Warrior-Classic-Las-Vegas/Pitts07.jpg" },
   ],
   //champ flyers
-  [{ url: "warriorsLogo.png" }, { url: "warriorsLogo.png" }],
+  [{ url: "NC_LogoHiRes_noBG1.png" }, { url: "photos_coming_soon.png" }],
 
   [
     { url: "2019-Warrior-Classic-Las-Vegas/Avs3.jpg" },
@@ -25,7 +25,7 @@ const images = [
 
     ,
   ],
-  [{ url: "warriorsLogo.png" }, { url: "warriorsLogo.png" }],
+  [{ url: "NC_LogoHiRes_noBG1.png" }, { url: "photos_coming_soon.png" }],
   [
     { url: "2019-Warrior-Classic-Las-Vegas/Philly1.jpg" },
     { url: "2019-Warrior-Classic-Las-Vegas/Philly2.jpg" },
@@ -37,7 +37,7 @@ const images = [
     { url: "2019-Warrior-Classic-Las-Vegas/Philly8.jpg" },
     { url: "2019-Warrior-Classic-Las-Vegas/Philly9.png" },
   ],
-  [{ url: "warriorsLogo.png" }, { url: "warriorsLogo.png" }],
+  [{ url: "NC_LogoHiRes_noBG1.png" }, { url: "photos_coming_soon.png" }],
   [
     { url: "FirstGame/1.jpg" },
     { url: "FirstGame/2.jpg" },

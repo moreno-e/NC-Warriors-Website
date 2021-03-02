@@ -83,7 +83,7 @@ function PlayerProfiles() {
         spacing={6}
       >
         {UpperPlayerInfo.map((data) => (
-          <Grid item sm={3} >
+          <Grid item md={3} >
             <Card className={classes.card}>
               <CardMedia component="img" image={data.image} />
               <CardContent>

@@ -10,13 +10,13 @@ const data = [
     name: "Matt Mason",
     image: "../PlayerImages/Mason.jpg",
     bio:
-      "An Infantry Officer in the U.S. Army for 10 years, with deployments to Iraq and Jordan. He wears #17 the same number as Rod Brind'Amour, The Carolina Hurricanes Head Coach. He's been playing hockey for 25 years and his favorite team is the NC Warriors, coincidentally. Outside of hockey he enjoy surfing, triathlons, and traveling. Additionally, he may have a small penchant for mischief, hijinks, and all types of shenanigans.",
+      "An Infantry Officer in the U.S. Army for 10 years, with deployments to Iraq and Jordan. He's been playing hockey for 25 years and his favorite team is the NC Warriors, coincidentally. Outside of hockey he enjoy surfing, triathlons, and traveling. Additionally, he may have a small penchant for mischief, hijinks, and all types of shenanigans.",
   },
   {
-    name: "Shawn Hanrahan",
-    image: "../PlayerImages/Hanrahan.jpg",
+    name: "Donald Urbany",
+    image: "../PlayerImages/Urbany.jpg",
     bio:
-      "Shawn is from Unadilla, NY. Shawn served for four years in the US Marine Corps as a 6531 Aviation Ordnance Technician and has been playing hockey for about 5 years now with no plans of stopping anytime soon. His favorite NHL Team is the New York Rangers "},
+      "Donald served in the US Army as a fire support specialist with 4/64th Armor, 4th Brigade, 3d Infantry Division out of Fort Stewart, GA. A recipent of a Purple Heart, Donald was struck by an IED causing him to lose his right eye in 2005 during a delpoyment to Iraq. However, this has not let it hinder his ability to read plays and stop the puck with ease, making him the best one eyed goalie we’ve ever seen!"},
   {
     name: "Shawn Hanrahan",
     image: "../PlayerImages/Hanrahan.jpg",

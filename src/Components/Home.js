@@ -105,8 +105,7 @@ function Home() {
       <>
         <Grid
           className={classes.grid}
-          container
-        
+          container        
           direction="row"
           justify="space-around"
           alignItems="flex-start"

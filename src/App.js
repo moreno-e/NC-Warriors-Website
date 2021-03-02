@@ -12,6 +12,7 @@ import NewPlayerForm from "./Components/NewPlayerForm";
 import Store from "./Components/Store";
 import Footer from "./Footer";
 import DataFetching from "./Components/DataFetching";
+import PlayerTable from "./Components/PlayerTable"
 function App() {
   return (
     <>
@@ -33,6 +34,7 @@ function App() {
           <Route path="/NewPlayerForm" exact component={NewPlayerForm} />
           <Route path="/Store" exact component={Store} />
           <Route path="/DataFetching" exact component={DataFetching} />
+          <Route path="/PlayerTable" exact component={PlayerTable} />
         </Switch>
       </Router>
 

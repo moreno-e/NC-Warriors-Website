@@ -38,9 +38,9 @@ const data = [
     { url: "9.25.20-Venom/WarriorsVenom100420_037.jpg" },
     { url: "9.25.20-Venom/WarriorsVenom100420_039.jpg" },
   ],
-  [{ url: "warriorsLogo.png" }, { url: "warriorsLogo.png" }],
+  [{ url: "NC_LogoHiRes_noBG1.png" }, { url: "photos_coming_soon.png" }],
 
-  [{ url: "warriorsLogo.png" }, { url: "warriorsLogo.png" }],
+  [{ url: "NC_LogoHiRes_noBG1.png" }, { url: "photos_coming_soon.png" }],
 ];
 
 export default data;
