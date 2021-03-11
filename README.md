@@ -40,7 +40,7 @@ This website will replace the current ncwarriors.com website. The new applicaito
 
 ## What app looks like as of 3.2.2021
 Home Page
-![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_HomePage1.png)
+![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_HomeLogin.png)
 
 Player Profiles
 ![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_PlayerProfilesPage.png)
