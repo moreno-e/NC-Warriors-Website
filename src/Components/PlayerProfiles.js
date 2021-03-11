@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "'Open Sans', sans-serif",
   },
   titles: {
-    backgroundColor: "white",
     textAlign: "left",
     paddingLeft: "20px",
     paddingTop: "20px",
@@ -34,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     textAlign: "center",
     color: theme.palette.text.secondary,
-  },  
+  },
   card: {
     maxWidth: "auto",
     marginBottom: "50px",
@@ -55,8 +54,6 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "'Open Sans', sans-serif",
     textIndent: "50px",
   },
-  
-  
 }));
 
 function PlayerProfiles() {
@@ -82,7 +79,7 @@ function PlayerProfiles() {
         spacing={6}
       >
         {UpperPlayerInfo.map((data) => (
-          <Grid item sm={3} >
+          <Grid item sm={3}>
             <Card className={classes.card}>
               <CardMedia component="img" image={data.image} />
               <CardContent>

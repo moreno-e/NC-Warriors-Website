@@ -11,7 +11,6 @@ import imagesPNC from "../DataFiles/HeaderImages.js";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 import shipLogo from "../Images/WarriorsShip.png";
 import Image from "material-ui-image";
 

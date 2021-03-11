@@ -1,41 +1,41 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { useState, useEffect, useContext } from "react";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-import { useFormik } from "formik";
-import Input from "@material-ui/core/Input";
-import { Container, Grid } from "@material-ui/core";
+import {  useFormik } from "formik";
+import { Container } from "@material-ui/core";
+import AuthenticationService from "./AuthenticationService";
+import { useHistory } from "react-router-dom";
+import { LoggedInContext } from "../App.js";
+
 
 const useStyles = makeStyles((theme) => ({
-  container:{
+  container: {
     display: "flex",
-    alignItems: "center"
-  }
-  ,
-  
-  
-    form: {
+    alignItems: "center",
+  },
+
+  form: {
     backgroundColor: "white",
     margin: "1em",
     borderRadius: "5px",
     alignItems: "center",
-    
- 
   },
   label: {
     margin: "1em",
   },
-  formItems:{
+  formItems: {
     display: "block",
-    margin: "1em"
-  }
+    margin: "1em",
+  },
 }));
 
 function Login() {
   const classes = useStyles();
-    
+  const [loginFailed, setLoginFailed] = useState();
+  const history = useHistory();
 
+  const setLoggedIn = useContext(LoggedInContext)
 
 
   const formik = useFormik({
@@ -44,46 +44,62 @@ function Login() {
       password: "",
     },
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      AuthenticationService
+        // passes credentials to backend and returns, if valid, token
+        .executeJwtAuthenticationService(values.username, values.password)
+        .then((response) => {
+          //passes the name and token for furth http request
+          AuthenticationService.registerSuccessfulLoginForJwt(
+            values.username,
+            response.data.token
+          );
+          setLoggedIn(true)
+        })
+        .then(() =>{
+          history.push("/DataFetching");
+        })
+        .catch(() => {
+          setLoginFailed(true);
+        });
     },
   });
 
-  console.log(formik.values);
+  useEffect(() => {}, [loginFailed]);
 
   return (
-   
     <Container className={classes.container}>
       <form className={classes.form} onSubmit={formik.handleSubmit}>
-        
-          <TextField
-            className={classes.formItems}
-            label="Username"
-            type="text"
-            id="username"
-            name="username"
-            onChange={formik.handleChange}
-            value={formik.values.username}
-          />        
-          
-          <TextField
+        <TextField
           className={classes.formItems}
-            label="Password"
-            type="password"
-            id="password"
-            name="password"
-            onChange={formik.handleChange}
-            value={formik.values.password}
-          />  
-       
+          label="Username"
+          type="text"
+          id="username"
+          name="username"
+          onChange={formik.handleChange}
+          value={formik.values.username}
+        />
 
-       
-        <Button className={classes.formItems} variant="contained" color="primary" type="submit">
+        <TextField
+          className={classes.formItems}
+          label="Password"
+          type="password"
+          id="password"
+          name="password"
+          onChange={formik.handleChange}
+          value={formik.values.password}
+        />
+
+        <Button
+          className={classes.formItems}
+          variant="contained"
+          color="primary"
+          type="submit"
+        >
           Submit
         </Button>
       </form>
     </Container>
   );
- 
 }
 
 export default Login;

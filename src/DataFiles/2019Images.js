@@ -23,7 +23,7 @@ const images = [
     { url: "2019-Warrior-Classic-Las-Vegas/Avs1.jpg" },
     { url: "2019-Warrior-Classic-Las-Vegas/Avs2.jpg" },
 
-    ,
+    
   ],
   [{ url: "NC_LogoHiRes_noBG1.png" }, { url: "photos_coming_soon.png" }],
   [
