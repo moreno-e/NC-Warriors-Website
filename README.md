@@ -17,14 +17,17 @@ This website will replace the current ncwarriors.com website. The new applicaito
   
 - Store & Fundraising
   - Redirects to the Warriors store and the new player form
+
+- Login
+  - Using api calls to the backend, board member are allowed to see all members of the warriors program
+  - Currently only GET request work  
   
 ## Future Features
-- Login Feature
-  - Current API Spring back end is being worked on
-  - Will allow board members and coahces to view current players on the team from an API (Spring Security)
-  - Allow request from SportsEngine API to display player stats who are currently on a league team
+- Backend Feature
+  - Working on the ability to add, update, and delete players
 
 ## Dependencies
+- Backend API (see repository)
 - React
 - Spring
   - Boot
@@ -47,4 +50,10 @@ Events Page
 
 Fundraising & Sponsors Page
 ![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_FundraisingSponsorsPage1.png)
+
+Backend Full Team
+![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_FullTeam.png)
+
+Backend Lower Team
+![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_LowerTeam.png)
 
