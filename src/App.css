@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Quattrocento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+.App-Content {
+  
+  flex: 1 0 auto,
+
+}
+
+.Footer {
+  flex-shrink: 0;
+}
+
+.Home-Img{
+  max-height: 50%;
+  max-width: 50%;
+}
+
+.Sidebar{
+  height: 100%;
+  width: 50px;
+  background-color: black;
+  position: absolute;
+}
+
+
+
+@media all and (max-width: 500px){
+  .slider1{
+    display: none;
+  
+  }
+}
+
+
+
