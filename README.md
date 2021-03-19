@@ -17,14 +17,17 @@ This website will replace the current ncwarriors.com website. The new applicaito
   
 - Store & Fundraising
   - Redirects to the Warriors store and the new player form
+
+- Login
+  - Using api calls to the backend, board member are allowed to see all members of the warriors program
+  - Currently only GET request work  
   
 ## Future Features
-- Login Feature
-  - Current API Spring back end is being worked on
-  - Will allow board members and coahces to view current players on the team from an API (Spring Security)
-  - Allow request from SportsEngine API to display player stats who are currently on a league team
+- Backend Feature
+  - Working on the ability to add, update, and delete players
 
 ## Dependencies
+- Backend API (see repository)
 - React
 - Spring
   - Boot
@@ -37,14 +40,26 @@ This website will replace the current ncwarriors.com website. The new applicaito
 
 ## What app looks like as of 3.2.2021
 Home Page
-![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_HomePage1.png)
+![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_HomeLogin.png)
 
 Player Profiles
-![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_PlayerProfilesPage.png)
+![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot-PlayerProfilesPage.png)
 
 Events Page
-![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_EventsPage1.png)
+![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot-EventsPage.png)
 
 Fundraising & Sponsors Page
 ![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_FundraisingSponsorsPage1.png)
+
+Admins Page
+![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot-AdminPage.png)
+
+Add / Update Player Page
+![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot-AddUpdatePlayerPage.png)
+
+Full Team Button Selection Display
+![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_FullTeam.png)
+
+Lower Team Button Selection Display
+![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_LowerTeam.png)
 
