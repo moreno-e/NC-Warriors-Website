@@ -14,8 +14,10 @@ class AuthenticationService {
   }
 
   registerSuccessfulLoginForJwt(username, token) {
+
     sessionStorage.setItem(USER_NAME_SESSION_ATTRIBUTE_NAME, username);
     this.setupAxiosInterceptors(this.createJWTToken(token));
+    
   }
 
   createJWTToken(token) {    
@@ -44,6 +46,7 @@ class AuthenticationService {
 
   //every http request from know on should use the token
   setupAxiosInterceptors(token) {
+   
     axios.interceptors.request.use(
       (config) => {
         if (this.isUserLoggedIn()) {
@@ -52,6 +55,7 @@ class AuthenticationService {
         return config;
       },
       (error) => {
+        console.log("error called in setup axios")
         return Promise.reject(error);
       }
     );

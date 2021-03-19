@@ -13,18 +13,24 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  title: {
+    fontFamily: "'Oswald', sans-serif",
+    color: "rgb(214,214,214)",
+    fontSize: "5.5em",
+    paddingTop: "4rem",
+    paddingBottom: "2rem",
+    textAlign: "center",
+    backgroundColor: "rgb(27, 27, 27)",
+  },
   topNote: {
     color: "rgb(214,214,214)",
-    paddingLeft: "20px",
-    marginTop: "50px",
+    margin: "4rem 0",
     textAlign: "center",
     fontFamily: "'Open Sans', sans-serif",
   },
   titles: {
     textAlign: "left",
-    paddingLeft: "20px",
-    paddingTop: "20px",
-    paddingBottom: "40px",
+    paddingBottom: "2.5rem",
     fontFamily: "'Oswald', sans-serif",
     backgroundColor: "rgb(27, 27, 27)",
     color: "rgb(214,214,214)",
@@ -36,23 +42,22 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     maxWidth: "auto",
-    marginBottom: "50px",
+    marginBottom: "4rem",
     backgroundColor: "rgb(27, 27, 27)",
     minHeight: "700px",
     color: "rgb(214,214,214)",
     border: "1px solid",
-    paddingBottom: "10px",
   },
   overridePlayerHeading: {
     ...theme.typography.fontFamily,
     fontFamily: "'Oswald', sans-serif",
     fontWeight: "bold",
-    paddingBottom: "10px",
+    paddingBottom: ".7rem",
   },
   overridePlayerBody: {
     ...theme.typography.fontFamily,
     fontFamily: "'Open Sans', sans-serif",
-    textIndent: "50px",
+    textIndent: "3.125rem",
   },
 }));
 
@@ -61,10 +66,24 @@ function PlayerProfiles() {
 
   return (
     <Container maxWidth="xl" className={classes.root}>
-      <h2 className={classes.topNote}>
-        We currently have 74 members! We will continue adding members each week
-        as we release our player spotlight feature on our social media pages!
-      </h2>
+      <Typography className={classes.title}>
+        The North Carolina Warriors Hockey Team
+      </Typography>
+      <Typography variant="h5" className={classes.topNote}>
+        <p>
+          We currently have 74 members and growing! Our program is split into
+          two teams, Lower and Upper. Comprised of various skill levels from
+          newly skating to skating for decades. We compete nationally against
+          other Warriors teams as well as others. In addition, we currently have two
+          league teams comprised of members from the program at the Wake Competition  Center in Raleigh, North Carolina.
+          The N.C. Warriors Intermediate C Team and the N.C. Warriors Lower C
+          Team.
+        </p>
+        <p>
+          We will continue adding members each week as we release our player
+          spotlight feature on our social media pages. Be sure to follow!
+        </p>
+      </Typography>
       <Typography className={classes.titles} variant="h3">
         The Warriors Upper Team
       </Typography>

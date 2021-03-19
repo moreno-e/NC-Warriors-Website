@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
   grid: {
     backgroundColor: "rgb(27, 27, 27)",
     color: "rgb(214,214,214)",
+    margin:"2em 0"
   },
   button: {
     "& > *": {
@@ -29,14 +30,14 @@ const useStyles = makeStyles((theme) => ({
   },
   leftHeading: {
     textAlign: "center",
-    paddingBottom: "30px",
-    paddingTop: "30px",
+    paddingBottom: "1.875rem",
+    paddingTop: "1.875rem",
     fontFamily: "'Oswald', sans-serif",
   },
   rightHeading: {
     textAlign: "center",
-    paddingTop: "30px",
-    paddingBottom: "15px",
+    paddingTop: "1.875rem",
+    paddingBottom: ".9rem",
     fontFamily: "'Oswald', sans-serif",
   },
   sponsorNames: {
@@ -63,8 +64,8 @@ const useStyles = makeStyles((theme) => ({
   overrideSponsorBody: {
     ...theme.typography.fontFamily,
     fontFamily: "'Open Sans', sans-serif",
-    fontSize: "20px",
-    paddingBottom: "30px",
+    fontSize: "1.25rem",
+    paddingBottom: "1.875rem",
   },
   imgHide: {
     [theme.breakpoints.down("md")]: {
@@ -137,7 +138,7 @@ function FundraisingSponsors() {
                 style={{
                   height: "127px",
                   width: "256px",
-                  margin:"55px 0"
+                  margin: "55px 0",
                 }}
               ></img>
             </p>
@@ -151,7 +152,7 @@ function FundraisingSponsors() {
               </Typography>
               <p style={{ textAlign: "center" }}>
                 <Typography className={classes.overrideSponsorBody}>
-                  Edge Printed Products is a full scale Screen Printing,
+                  Edge Printed Products is a full-scale Screen Printing,
                   Embroidery, Signage and E-Commerce fulfillment shop dedicated
                   to providing high quality products with industry leading
                   turnaround times."
@@ -180,7 +181,7 @@ function FundraisingSponsors() {
                 style={{
                   height: "250px",
                   width: "250px",
-                  margin:"55px 0"
+                  margin: "55px 0",
                 }}
               ></img>
             </p>
@@ -219,11 +220,11 @@ function FundraisingSponsors() {
         </Grid>
 
         <Grid item sm={4}>
-          <Typography className={classes.rightHeading} variant="h3">
-            Looking to Donate?
-          </Typography>
-          <p style={{ textAlign: "center" }}>
-            <div>
+          <div>
+            <Typography className={classes.rightHeading} variant="h3">
+              Looking to Donate?
+            </Typography>
+            <p style={{ textAlign: "center" }}>
               <Typography className={classes.overrideSponsorBody}>
                 We are in the process of raising funds to help purchase more ice
                 time, equipment, travel and other essentials for the North
@@ -241,29 +242,29 @@ function FundraisingSponsors() {
                 charity games, and start working on projects to help give back
                 to the community. If you know of anyone who would be interested
                 in becoming a sponsor or would like to be a part of the team
-                please reach out to us at
-                <b> travis.harris@northcarolinawarriors.com</b>
+                please reach out to us at <br></br>
+                <b> travis.harris <br></br>@northcarolinawarriors.com</b>
               </Typography>
-            </div>
-         
-          <div>
-            <Button
-              className={classes.button}
-              variant="outlined"
-              color="secondary"
-              href="https://www.facebook.com/donate/391367195112463/"
-            >
-              Click here to donate
-            </Button>
+
+              <div>
+                <Button
+                  className={classes.button}
+                  variant="outlined"
+                  color="secondary"
+                  href="https://www.facebook.com/donate/391367195112463/"
+                >
+                  Click here to donate
+                </Button>
+              </div>
+            </p>
+            <br></br>
+            <img
+              className={classes.center}
+              src={WarriorsOHT}
+              height="375"
+              width="375"
+            ></img>
           </div>
-          </p>
-          <br></br>
-          <img
-            className={classes.center}
-            src={WarriorsOHT}
-            height="375"
-            width="375"
-          ></img>
         </Grid>
       </Grid>
     </Container>

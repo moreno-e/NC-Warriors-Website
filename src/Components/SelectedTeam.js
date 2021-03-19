@@ -12,6 +12,7 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography, Container } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   table: {
@@ -50,11 +51,12 @@ const useStyles = makeStyles((theme) => ({
 function SelectedTeam() {
   const classes = useStyles();
   const [players, setPlayers] = useState([]);
+  const history = useHistory();
   //must have same name for destructoring
   const { team } = useParams();
 
   useEffect(() => {
-    PlayerDataService.retrieveLowerPlayers(team)
+    PlayerDataService.retrieveSelectedTeam(team)
       .then((response) => {
         console.log(response);
         setPlayers(response.data);
@@ -63,6 +65,10 @@ function SelectedTeam() {
         console.log(error + " bad");
       });
   }, []);
+
+  const handleButtonClick = () => {
+    history.push("/DataFetching")
+  }
 
   return (
     <div>
@@ -138,6 +144,9 @@ function SelectedTeam() {
             </TableBody>
           </Table>
         </TableContainer>
+        <Button style={{marginTop: "1em"}} variant="contained" color="primary" onClick={()=> handleButtonClick()}>
+                      Return to Home
+                    </Button>
       </Container>
     </div>
   );

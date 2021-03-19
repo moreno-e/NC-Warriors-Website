@@ -9,11 +9,12 @@ import PlayerProfiles from "./Components/PlayerProfiles";
 import Events from "./Components/Events";
 import FundraisingSponsors from "./Components/FundraisingSponsors";
 import Footer from "./Footer";
-
+import AddPlayer from "./Components/AddPlayer";
 import DataFetching from "./Components/DataFetching";
 import AuthenticatedRoute from "./Components/AuthenticatedRoute.jsx";
 import AuthenticationService from "./Components/AuthenticationService.js";
 import SelectedTeam from "./Components/SelectedTeam";
+import InterestPage from "./Components/InterestPage";
 
 export const LoggedInContext = createContext();
 
@@ -40,6 +41,7 @@ function App() {
             exact
             component={FundraisingSponsors}
           />
+          <Route path="/Interest" exact component={InterestPage} />
           <AuthenticatedRoute
             path="/DataFetching"
             exact
@@ -47,6 +49,9 @@ function App() {
           />
           <Route path="/players/team/:team">
             <SelectedTeam />
+          </Route>
+          <Route path="/players/player/:id">
+            <AddPlayer />
           </Route>
 
           <LoggedInContext.Provider value={setIsLoggedIn}>

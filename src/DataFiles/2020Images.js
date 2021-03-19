@@ -1,10 +1,18 @@
 const data = [
   [
+    { url: "9.26.20-Sasquatch/WarriorsSasquatch100220_034.jpg" },
     { url: "9.26.20-Sasquatch/WarriorsSasquatch100220_004.jpg" },
     { url: "9.26.20-Sasquatch/WarriorsSasquatch100220_005.jpg" },
     { url: "9.26.20-Sasquatch/WarriorsSasquatch100220_006.jpg" },
     { url: "9.26.20-Sasquatch/WarriorsSasquatch100220_007.jpg" },
     { url: "9.26.20-Sasquatch/WarriorsSasquatch100220_010.jpg" },
+    { url: "9.26.20-Sasquatch/WarriorsSasquatch100220_014.jpg" },
+    { url: "9.26.20-Sasquatch/WarriorsSasquatch100220_016.jpg" },
+    { url: "9.26.20-Sasquatch/WarriorsSasquatch100220_018.jpg" },
+    { url: "9.26.20-Sasquatch/WarriorsSasquatch100220_019.jpg" },
+    { url: "9.26.20-Sasquatch/WarriorsSasquatch100220_028.jpg" },
+    { url: "9.26.20-Sasquatch/WarriorsSasquatch100220_030.jpg" },
+    { url: "9.26.20-Sasquatch/WarriorsSasquatch100220_033.jpg" },
   ],
   [
     { url: "9.25.20-Venom/WarriorsVenom100420_001.jpg" },
@@ -31,12 +39,19 @@ const data = [
     { url: "9.25.20-Venom/WarriorsVenom100420_027.jpg" },
     { url: "9.25.20-Venom/WarriorsVenom100420_030.jpg" },
     { url: "9.25.20-Venom/WarriorsVenom100420_031.jpg" },
-    { url: "9.25.20-Venom/WarriorsVenom100420_032.jpg" },
-    { url: "9.25.20-Venom/WarriorsVenom100420_034.jpg" },
+
     { url: "9.25.20-Venom/WarriorsVenom100420_035.jpg" },
     { url: "9.25.20-Venom/WarriorsVenom100420_036.jpg" },
-    { url: "9.25.20-Venom/WarriorsVenom100420_037.jpg" },
+
     { url: "9.25.20-Venom/WarriorsVenom100420_039.jpg" },
+    { url: "9.25.20-Venom/WarriorsVenom100420_040.jpg" },
+    { url: "9.25.20-Venom/WarriorsVenom100420_044.jpg" },
+    { url: "9.25.20-Venom/WarriorsVenom100420_045.jpg" },
+    { url: "9.25.20-Venom/WarriorsVenom100420_048.jpg" },
+    { url: "9.25.20-Venom/WarriorsVenom100420_054.jpg" },
+    { url: "9.25.20-Venom/WarriorsVenom100420_055.jpg" },
+    { url: "9.25.20-Venom/WarriorsVenom100420_056.jpg" },
+    { url: "9.25.20-Venom/WarriorsVenom100420_057.jpg" },
   ],
   [{ url: "NC_LogoHiRes_noBG1.png" }, { url: "photos_coming_soon.png" }],
 

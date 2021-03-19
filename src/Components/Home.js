@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 
   heading1: {
     fontFamily: "'Oswald', sans-serif",
-    fontSize: 40,
+    fontSize: "2.7em", //
     textAlign: "center",
   },
   p2: {
@@ -33,31 +33,19 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontFamily: "'Oswald', sans-serif",
     color: "rgb(214,214,214)",
-    fontSize: 80,
-    paddingTop: "50px",
-    marginTop: 0,
+    fontSize: "5.5em",
+    paddingTop: "4rem",
+    paddingBottom: "2rem",
     textAlign: "center",
     backgroundColor: "rgb(27, 27, 27)",
-    marginBottom: 0,
-  },
-  paper: {
-    display: "flex",
-    flexWrap: "wrap",
-    "& > *": {
-      margin: theme.spacing(1),
-      width: theme.spacing(16),
-      height: theme.spacing(16),
-    },
   },
   grid: {
     backgroundColor: "rgb(27, 27, 27)",
-    height: "100%",
-    paddingTop: "20px",
-    paddingBottom: "100px",
+    paddingBottom: "4.5rem",
     color: "rgb(214,214,214)",
   },
   card: {
-    marginBottom: "50px",
+    marginBottom: "3rem",
     backgroundColor: "rgb(27, 27, 27)",
     color: "rgb(214,214,214)",
     border: "1px solid",
@@ -65,8 +53,8 @@ const useStyles = makeStyles((theme) => ({
   paragraph: {
     ...theme.typography.fontFamily,
     fontFamily: "'Open Sans', sans-serif",
-    fontSize: "20px",
-    textIndent: "50px",
+    fontSize: "1.25em",
+    textIndent: "3.125rem",
   },
   test: {
     ...theme.typography.fontFamily,
@@ -76,13 +64,12 @@ const useStyles = makeStyles((theme) => ({
     ...theme.typography.fontFamily,
     fontFamily: "'Oswald', sans-serif",
     textAlign: "center",
-    fontSize: "30px",
+    fontSize: "1.875rem",
   },
-
   overrideSponsorBody: {
     ...theme.typography.fontFamily,
     fontFamily: "'Open Sans', sans-serif",
-    fontSize: "20px",
+    fontSize: "1.25",
   },
 }));
 
@@ -112,7 +99,7 @@ function Home() {
             <br></br>
             <Typography className={classes.paragraph} variant="body1">
               <b>Established 2019 in Raleigh, N.C.</b>, The North Carolina
-              Warriors Ice Hockey Program is a disabled veterans ice hockey team
+              Warriors Ice Hockey Program is a disabled veteran's ice hockey team
               that exists to benefit disabled veterans from the United States
               Military Services. They are one of 21 USA Hockey Warriors teams in
               the nation.
@@ -127,7 +114,7 @@ function Home() {
             <Typography className={classes.paragraph}>
               Each and every one of these teams exist with the focus of
               providing an athletic outlet, with a sense of therapy and
-              comradery for it’s members. The team consists of veterans that
+              comradery for its members. The team consists of veterans that
               have service rated disabilities that can, and do, include physical
               disabilities that include surgically rebuilt limbs, non-fully
               functional appendages, and other physical challenges that have
@@ -186,12 +173,12 @@ function Home() {
                   hockey for the past 28 years. To include being with the N.C.
                   Warriors since their inception. Having served in the US Army
                   as a fire support specialist with 4/64th Armor, 4th Brigade,
-                  3d Infantry Division out of Fort Stewart, GA. Donald is a recipent
-                  of a Purple Heart, having been struck by an IED causing him to
-                  lose his right eye in 2005 during a delpoyment to Iraq.
-                  However, this has not let it hinder his ability to read plays
-                  and stop the puck with ease, making him the best one eyed
-                  goalie we’ve ever seen!
+                  3d Infantry Division out of Fort Stewart, GA. Donald is a
+                  recipent of a Purple Heart, having been struck by an IED
+                  causing him to lose his right eye in 2005 during a delpoyment
+                  to Iraq. However, this has not let it hinder his ability to
+                  read plays and stop the puck with ease, making him the best
+                  one eyed goalie we’ve ever seen!
                 </Typography>
               </CardContent>
             </Card>

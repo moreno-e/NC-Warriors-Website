@@ -114,9 +114,8 @@ function NavBar({ isLoggedIn }) {
       href: "https://stores.inksoft.com/ncwarriorshockey/shop/home",
     },
     {
-      buttonTitle: "New Player Form",
-      href:
-        "https://docs.google.com/forms/d/e/1FAIpQLScg7QnXVUhoXJFNv27DcjpOlDAPkhny3q7JnGS2pIdJNoTvKQ/viewform",
+      buttonTitle: "Interested in Joining?",
+      pageURL: "/Interest",
     },
   ];
 
@@ -208,8 +207,9 @@ function NavBar({ isLoggedIn }) {
                 </Button>
               </div>
             ) : (
+              //MUST CHANGE!!!!!!!!!! TO LOG IN
               <Button
-                onClick={() => handleButtonClick("/login")}
+                onClick={() => handleButtonClick("/")}
                 className={classes.buttonLogins}
                 variant="outlined"
                 color="secondary"
