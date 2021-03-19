@@ -43,17 +43,23 @@ Home Page
 ![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_HomeLogin.png)
 
 Player Profiles
-![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_PlayerProfilesPage.png)
+![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot-PlayerProfilesPage.png)
 
 Events Page
-![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_EventsPage1.png)
+![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot-EventsPage.png)
 
 Fundraising & Sponsors Page
 ![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_FundraisingSponsorsPage1.png)
 
-Backend Full Team
+Admins Page
+![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot-AdminPage.png)
+
+Add / Update Player Page
+![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot-AddUpdatePlayerPage.png)
+
+Full Team Button Selection Display
 ![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_FullTeam.png)
 
-Backend Lower Team
+Lower Team Button Selection Display
 ![alt text](https://github.com/moreno-e/NC-Warriors-Website/blob/main/Screenshot_LowerTeam.png)
 
