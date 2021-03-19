@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { createContext, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Components/Home";
 import Login from "./Components/Login";
@@ -8,33 +8,55 @@ import NavBar from "./Components/NavBar";
 import PlayerProfiles from "./Components/PlayerProfiles";
 import Events from "./Components/Events";
 import FundraisingSponsors from "./Components/FundraisingSponsors";
-import NewPlayerForm from "./Components/NewPlayerForm";
-import Store from "./Components/Store";
 import Footer from "./Footer";
+import AddPlayer from "./Components/AddPlayer";
 import DataFetching from "./Components/DataFetching";
-import PlayerTable from "./Components/PlayerTable"
+import AuthenticatedRoute from "./Components/AuthenticatedRoute.jsx";
+import AuthenticationService from "./Components/AuthenticationService.js";
+import SelectedTeam from "./Components/SelectedTeam";
+import InterestPage from "./Components/InterestPage";
+
+export const LoggedInContext = createContext();
+
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    AuthenticationService.isUserLoggedIn()
+  );
+
   return (
     <>
       <img src={Banner} />
 
       <Router>
-        <NavBar />
+        <LoggedInContext.Provider value={setIsLoggedIn}>
+          <NavBar isLoggedIn={isLoggedIn} />
+        </LoggedInContext.Provider>
 
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/Login" exact component={Login} />
-          <Route path="/PlayerProfiles" exact component={PlayerProfiles} />
-          <Route path="/Events" exact component={Events} />
+          <Route path="/PlayerProfiles" component={PlayerProfiles} />
+          <Route path="/Events" component={Events} />
           <Route
             path="/FundraisingSponsors"
             exact
             component={FundraisingSponsors}
           />
-          <Route path="/NewPlayerForm" exact component={NewPlayerForm} />
-          <Route path="/Store" exact component={Store} />
-          <Route path="/DataFetching" exact component={DataFetching} />
-          <Route path="/PlayerTable" exact component={PlayerTable} />
+          <Route path="/Interest" exact component={InterestPage} />
+          <AuthenticatedRoute
+            path="/DataFetching"
+            exact
+            component={DataFetching}
+          />
+          <Route path="/players/team/:team">
+            <SelectedTeam />
+          </Route>
+          <Route path="/players/player/:id">
+            <AddPlayer />
+          </Route>
+
+          <LoggedInContext.Provider value={setIsLoggedIn}>
+            <Route path="/login" exact component={Login} />
+          </LoggedInContext.Provider>
         </Switch>
       </Router>
 

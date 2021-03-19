@@ -11,7 +11,6 @@ import imagesPNC from "../DataFiles/HeaderImages.js";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
 import shipLogo from "../Images/WarriorsShip.png";
 import Image from "material-ui-image";
 
@@ -22,24 +21,17 @@ const useStyles = makeStyles((theme) => ({
   },
   grid: {
     backgroundColor: "rgb(27, 27, 27)",
-    paddingBottom: "30px",
-  },
-  gridItem: {
-    marginBottom: "50px",
-    display: "grid",
-    justifyItems: "center",
-    alignItems: "center",
-  },
+    paddingBottom: "2rem",  //was 30px
+  }, 
   shipLogo: {
     backgroundColor: "rgb(27, 27, 27)",
     [theme.breakpoints.down("lg")]: {
       display: "none",
     },
   },
-
   slider: {   
     backgroundColor: "rgb(27, 27, 27)",
-    paddingTop: "20px",
+    paddingTop: "2rem",
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
@@ -54,27 +46,17 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
-  paragraph: {
-    fontSize: "30px",
-  },
-  yearDescription: {
-    paddingLeft: "40px",
-    marginBottom: "50px",
+  yearDescription: {    
+    marginBottom: "2rem",
     backgroundColor: "rgb(27, 27, 27)",
     color: "rgb(214,214,214)",
     textDecoration: "underline",
     fontFamily: "'Oswald', sans-serif",
-    fontSize: "50px",
-  }, 
-  paper: {
-    paddingTop: "10px",
-    paddingLeft: "10px",
-    width: "80%",
-    height: "auto",
+    fontSize: "3.2rem",
   },
-  card: {
-    width: "425px",
-    backgroundColor: "rgb(27, 27, 27)",
+
+  card: {    
+     backgroundColor: "rgb(27, 27, 27)",
     color: "rgb(214,214,214)",
     border: "1px solid",
     display: "block",
@@ -86,10 +68,14 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "'Oswald', sans-serif",
     fontWeight: "bold",
     paddingBottom: "10px",
+    
   },
   overrideCardBody: {
     ...theme.typography.fontFamily,
     fontFamily: "'Open Sans', sans-serif",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center"
+    },
   },
 }));
 
@@ -127,7 +113,7 @@ function Events() {
               height={600}
               images={imagesPNC}
               showNavs={true}
-              showBullets={true}
+            
               slideDuration={0.7}
             />
           </Grid>
@@ -141,6 +127,7 @@ function Events() {
           </Grid>
         </Grid>
 
+        {/* <> */}
         <Grid item xs={12}>
           <Typography
             className={classes.yearDescription}
