@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   yearDescription: {    
-    marginBottom: "2rem",
+    marginBottom: "2.7rem",
     backgroundColor: "rgb(27, 27, 27)",
     color: "rgb(214,214,214)",
     textDecoration: "underline",
@@ -134,7 +134,7 @@ function Events() {
             variant="h4"
             align="center"
           >
-            NC Warriors 2020 Games and Tournaments
+            NC WARRIORS 2020 GAMES AND TOURNAMENTS
           </Typography>
         </Grid>
 
@@ -202,7 +202,7 @@ function Events() {
           variant="h4"
           align="center"
         >
-          NC Warriors 2019 Games and Tournaments
+          NC Warriors 2019 GAMES AND TOURNAMENTS
         </Typography>
         <Grid
           className={classes.grid}

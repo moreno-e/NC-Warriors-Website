@@ -147,7 +147,10 @@ function Home() {
                 success. Stack the two together and you have something more
                 intimate and fraternal.”
               </i>{' '}
+              <div style={{textAlign: "center"}}>
               - #20 John Rodgers, Lower Team Captain
+              </div >
+              
             </Typography>
           </Grid>
 

@@ -65,9 +65,9 @@ function PlayerProfiles() {
   const classes = useStyles();
 
   return (
-    <Container maxWidth="xl" className={classes.root}>
-      <Typography className={classes.title}>
-        The North Carolina Warriors Hockey Team
+    <Container maxWidth="xl" className={classes.root} >
+      <Typography className={classes.title} variant="h1">
+        THE NORTH CAROLINA WARRIORS HOCKEY TEAM
       </Typography>
       <Typography variant="h5" className={classes.topNote}>
         <p>
