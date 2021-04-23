@@ -182,7 +182,7 @@ function NavBar({ isLoggedIn }) {
               </>
             )}
 
-            {isLoggedIn ? (
+            {/* {isLoggedIn ? (
               <div style={{ marginLeft: "auto" }}>
                 <Button
                   onClick={() => loggedOutClick("/")}
@@ -216,7 +216,7 @@ function NavBar({ isLoggedIn }) {
               >
                 <Typography className={classes.fontStyling}>Login</Typography>
               </Button>
-            )}
+            )} */}
           </Toolbar>
         </AppBar>
       </div>

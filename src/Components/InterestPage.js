@@ -4,20 +4,20 @@ import {
   Typography,
   makeStyles,
   Button,
-} from "@material-ui/core";
-import React from "react";
+} from '@material-ui/core';
+import React from 'react';
 
 const useStyles = makeStyles((theme) => ({
   heading: {
     fontFamily: "'Oswald', sans-serif",
-    color: "rgb(214,214,214)",
-    textAlign: "center",
+    color: 'rgb(214,214,214)',
+    textAlign: 'center',
   },
   paragraph: {
-    color: "rgb(214,214,214)",
+    color: 'rgb(214,214,214)',
     fontFamily: "'Open Sans', sans-serif",
-    fontSize: "1.25em",
-    justifyContent: "center",
+    fontSize: '1.25em',
+    justifyContent: 'center',
   },
 }));
 
@@ -28,11 +28,11 @@ function InterestPage() {
       <Grid container justify="center" alignItems="center">
         <Grid item xs={6}>
           <Typography className={classes.heading} variant="h2">
-            Interested in becoming a Warrior?
+            Interested in joining the N.C. Warriors?
           </Typography>
           <Typography
             className={classes.paragraph}
-            style={{ textIndent: "1.25rem" }}
+            style={{ textIndent: '1.25rem' }}
           >
             <p>
               First, thank you for your interest and your support. Our program
@@ -40,20 +40,25 @@ function InterestPage() {
               Now we are currently at 74 players and growing.
             </p>
             <p>
-              You will be on a team comprised of veterans, male and female, with
-              a wide age range, from all branches (still waiting for Space
-              Force). We are excited to have our first female Warriors join our
-              program recently and are hoping for an all female Warriors team!
+              You will be on a team comprised of veterans, from all branches
+              (excluding Space Force). Male and female, with a wide age range.
+              We are excited to have our first female Warriors join our program
+              recently and are hoping for an all female Warriors team!
             </p>
             <p>
               <b>
-                Please check below to see if you are eligible and selected the
-                button below to join the North Carolina Warriors Hockey Team.
+                Please check below to see if you are eligible, then continue to
+                our New Player Form to join the North Carolina Warriors Hockey
+                Team.
               </b>
             </p>
           </Typography>
-          <div style={{ textAlign: "center", margin: "1em" }}>
-            <Button variant="outlined" color="secondary">
+          <div style={{ textAlign: 'center', margin: '1em' }}>
+            <Button
+              variant="outlined"
+              color="secondary"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScg7QnXVUhoXJFNv27DcjpOlDAPkhny3q7JnGS2pIdJNoTvKQ/viewform"
+            >
               New Player Form
             </Button>
           </div>
@@ -64,7 +69,7 @@ function InterestPage() {
 
           <Typography
             className={classes.paragraph}
-            style={{ textIndent: "1.25rem" }}
+            style={{ textIndent: '1.25rem' }}
           >
             <p>
               USA Hockey's Warriors Hockey Discipline is dedicated to injured
@@ -100,9 +105,9 @@ function InterestPage() {
                 injury incurred or aggravated during active military service.
               </li>
               <li>
-                Post-service disabilities  that are considered related or
+                Post-service disabilities that are considered related or
                 secondary to disabilities occurring in service and for
-                disabilities presumed  to be related to circumstances of military
+                disabilities presumed to be related to circumstances of military
                 service, even though they may arise after service.
               </li>
               <li>

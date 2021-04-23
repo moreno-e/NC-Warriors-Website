@@ -1,60 +1,60 @@
-import "fontsource-roboto";
-import { Typography, Container } from "@material-ui/core";
-import Grid from "@material-ui/core/Grid";
-import { makeStyles } from "@material-ui/core/styles";
-import "./Home.css";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardHeader from "@material-ui/core/CardHeader";
-import Image from "material-ui-image";
-import Schmidt from "../Images/Schmidt.jpg";
-import Benner from "../Images/Urbany.jpg";
-import "fontsource-roboto";
-import Team from "../Images/WarriorsTeamPhoto.jpg";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import TwitterIcon from "@material-ui/icons/Twitter";
+import 'fontsource-roboto';
+import { Typography, Container } from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import './Home.css';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardHeader from '@material-ui/core/CardHeader';
+import Image from 'material-ui-image';
+import Schmidt from '../Images/Schmidt.jpg';
+import Benner from '../Images/G.Walters.jpg';
+import 'fontsource-roboto';
+import Team from '../Images/WarriorsTeamPhoto.jpg';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import TwitterIcon from '@material-ui/icons/Twitter';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: "rgb(27, 27, 27)",
+    backgroundColor: 'rgb(27, 27, 27)',
   },
 
   heading1: {
     fontFamily: "'Oswald', sans-serif",
-    fontSize: "2.7em", //
-    textAlign: "center",
+    fontSize: '2.7em', //
+    textAlign: 'center',
   },
   p2: {
-    fontStyle: "italic",
+    fontStyle: 'italic',
   },
   title: {
     fontFamily: "'Oswald', sans-serif",
-    color: "rgb(214,214,214)",
-    fontSize: "5.5em",
-    paddingTop: "4rem",
-    paddingBottom: "2rem",
-    textAlign: "center",
-    backgroundColor: "rgb(27, 27, 27)",
+    color: 'rgb(214,214,214)',
+    fontSize: '5.5em',
+    paddingTop: '4rem',
+    paddingBottom: '2rem',
+    textAlign: 'center',
+    backgroundColor: 'rgb(27, 27, 27)',
   },
   grid: {
-    backgroundColor: "rgb(27, 27, 27)",
-    paddingBottom: "4.5rem",
-    color: "rgb(214,214,214)",
+    backgroundColor: 'rgb(27, 27, 27)',
+    paddingBottom: '4.5rem',
+    color: 'rgb(214,214,214)',
   },
   card: {
-    marginBottom: "3rem",
-    backgroundColor: "rgb(27, 27, 27)",
-    color: "rgb(214,214,214)",
-    border: "1px solid",
+    marginBottom: '3rem',
+    backgroundColor: 'rgb(27, 27, 27)',
+    color: 'rgb(214,214,214)',
+    border: '1px solid',
   },
   paragraph: {
     ...theme.typography.fontFamily,
     fontFamily: "'Open Sans', sans-serif",
-    fontSize: "1.25em",
-    textIndent: "3.125rem",
+    fontSize: '1.25em',
+    textIndent: '3.125rem',
   },
   test: {
     ...theme.typography.fontFamily,
@@ -63,13 +63,13 @@ const useStyles = makeStyles((theme) => ({
   overrideCardHeading: {
     ...theme.typography.fontFamily,
     fontFamily: "'Oswald', sans-serif",
-    textAlign: "center",
-    fontSize: "1.875rem",
+    textAlign: 'center',
+    fontSize: '1.875rem',
   },
   overrideSponsorBody: {
     ...theme.typography.fontFamily,
     fontFamily: "'Open Sans', sans-serif",
-    fontSize: "1.25",
+    fontSize: '1.25',
   },
 }));
 
@@ -90,7 +90,7 @@ function Home() {
           justify="space-around"
           alignItems="flex-start"
         >
-          <Grid item sm={5} style={{ marginTop: "50px" }}>
+          <Grid item sm={5} style={{ marginTop: '50px' }}>
             <Typography className={classes.heading1} variant="h3">
               AN ALL DISABLED VETERAN HOCKEY TEAM
             </Typography>
@@ -99,10 +99,10 @@ function Home() {
             <br></br>
             <Typography className={classes.paragraph} variant="body1">
               <b>Established 2019 in Raleigh, N.C.</b>, The North Carolina
-              Warriors Ice Hockey Program is a disabled veteran's ice hockey team
-              that exists to benefit disabled veterans from the United States
-              Military Services. They are one of 21 USA Hockey Warriors teams in
-              the nation.
+              Warriors Ice Hockey Program is a disabled veteran's ice hockey
+              team that exists to benefit disabled veterans from the United
+              States Military Services. They are one of 21 USA Hockey Warriors
+              teams in the nation.
             </Typography>
 
             <br></br>
@@ -114,8 +114,8 @@ function Home() {
             <Typography className={classes.paragraph}>
               Each and every one of these teams exist with the focus of
               providing an athletic outlet, with a sense of therapy and
-              comradery for its members. The team consists of veterans that
-              have service rated disabilities that can, and do, include physical
+              comradery for its members. The team consists of veterans that have
+              service rated disabilities that can, and do, include physical
               disabilities that include surgically rebuilt limbs, non-fully
               functional appendages, and other physical challenges that have
               become the players new norm.
@@ -146,7 +146,7 @@ function Home() {
                 Military and teamwork is also a key component of mission
                 success. Stack the two together and you have something more
                 intimate and fraternal.”
-              </i>{" "}
+              </i>{' '}
               - #20 John Rodgers, Lower Team Captain
             </Typography>
           </Grid>
@@ -156,7 +156,7 @@ function Home() {
             sm={4}
             style={{
               marginTop: 50,
-              overflow: "hidden",
+              overflow: 'hidden',
             }}
           >
             <Card className={classes.card}>
@@ -169,28 +169,25 @@ function Home() {
               <CardMedia component="img" image={Benner} />
               <CardContent>
                 <Typography className={classes.paragraph}>
-                  <b>Donald Urbany</b> from Detroit, Michigan has been playing
-                  hockey for the past 28 years. To include being with the N.C.
-                  Warriors since their inception. Having served in the US Army
-                  as a fire support specialist with 4/64th Armor, 4th Brigade,
-                  3d Infantry Division out of Fort Stewart, GA. Donald is a
-                  recipent of a Purple Heart, having been struck by an IED
-                  causing him to lose his right eye in 2005 during a delpoyment
-                  to Iraq. However, this has not let it hinder his ability to
-                  read plays and stop the puck with ease, making him the best
-                  one eyed goalie we’ve ever seen!
+                  <b>Gregory Walters</b> is from Johnstown, PA and has been
+                  playing hockey for the past 18 years, being a part of the NC
+                  Warriors since its inception. Greg served in the Marine Corps
+                  as a Vehicle Recovery Operator part of 2nd Maintenance
+                  Battalion, Camp Lejeune, NC, with a deployment to Afghanistan.
+                  Greg has been playing competitive hockey since junior high
+                  school, high school and travel hockey 2A.
                 </Typography>
               </CardContent>
             </Card>
 
-            <Grid item style={{ marginBottom: "0px", marginTop: "20px" }}>
+            <Grid item style={{ marginBottom: '0px', marginTop: '20px' }}>
               <hr></hr>
               <br></br>
               <Typography
                 className={classes.paragraph}
                 align="center"
                 variant="h5"
-                style={{ marginTop: "40px" }}
+                style={{ marginTop: '40px' }}
               >
                 Be sure to follow us on social media!
               </Typography>
@@ -199,29 +196,29 @@ function Home() {
 
               <div
                 style={{
-                  display: "flex",
-                  justifyContent: "space-around",
-                  marginTop: "30px",
+                  display: 'flex',
+                  justifyContent: 'space-around',
+                  marginTop: '30px',
                 }}
               >
                 <FacebookIcon />
                 <a
                   href="https://www.facebook.com/NorthCarolinaWarriors"
-                  style={{ color: "white" }}
+                  style={{ color: 'white' }}
                 >
                   <Typography>Warriors Facebook</Typography>
                 </a>
                 <InstagramIcon />
                 <a
                   href="https://www.instagram.com/nc.warriors.hockey/"
-                  style={{ color: "white" }}
+                  style={{ color: 'white' }}
                 >
                   <Typography>Warriors Instagram</Typography>
                 </a>
                 <TwitterIcon />
                 <a
                   href="https://www.facebook.com/NorthCarolinaWarriors"
-                  style={{ color: "white" }}
+                  style={{ color: 'white' }}
                 >
                   <Typography>Warriors Twitter</Typography>
                 </a>
