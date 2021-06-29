@@ -9,7 +9,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardHeader from '@material-ui/core/CardHeader';
 import Image from 'material-ui-image';
 import Schmidt from '../Images/Schmidt.jpg';
-import Benner from '../Images/G.Walters.jpg';
+import Benner from '../Images/Gioles.jpg';
 import 'fontsource-roboto';
 import Team from '../Images/WarriorsTeamPhoto.jpg';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -147,10 +147,9 @@ function Home() {
                 success. Stack the two together and you have something more
                 intimate and fraternal.”
               </i>{' '}
-              <div style={{textAlign: "center"}}>
-              - #20 John Rodgers, Lower Team Captain
-              </div >
-              
+              <div style={{ textAlign: 'center' }}>
+                - #20 John Rodgers, Lower Team Captain
+              </div>
             </Typography>
           </Grid>
 
@@ -172,13 +171,17 @@ function Home() {
               <CardMedia component="img" image={Benner} />
               <CardContent>
                 <Typography className={classes.paragraph}>
-                  <b>Gregory Walters</b> is from Johnstown, PA and has been
-                  playing hockey for the past 18 years, being a part of the NC
-                  Warriors since its inception. Greg served in the Marine Corps
-                  as a Vehicle Recovery Operator part of 2nd Maintenance
-                  Battalion, Camp Lejeune, NC, with a deployment to Afghanistan.
-                  Greg has been playing competitive hockey since junior high
-                  school, high school and travel hockey 2A.
+                  <b>Coach Theo Gioles!</b> Theo is from Wantagh, NY and has
+                  been playing ice hockey since he was 10 years old. Although
+                  being fairly new to coaching he’s coached hockey in the past
+                  with the Ferraro Brothers in NY and specializes in Sports
+                  Performance Coaching and applies that knowledge to his hockey
+                  coaching as he is a big believer in skill development,
+                  especially when it comes to skating. Coach Gioles amount of
+                  respect for all of our service members is unwavering and we
+                  couldn’t appreciate all the time, effort and hard work he puts
+                  into helping our program grow and the development of our
+                  players. Thanks, Coach
                 </Typography>
               </CardContent>
             </Card>
